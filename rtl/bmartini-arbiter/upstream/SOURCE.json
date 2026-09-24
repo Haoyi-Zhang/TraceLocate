@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/bmartini/verilog-arbiter",
+  "commit": "782bf8f34244cc6a3f279f2dbac8b5bf3f044132",
+  "retrieved": "2026-09-18",
+  "files": {
+    "arbiter.v": {
+      "path": "src/arbiter.v",
+      "git_blob_sha1": "81d2c0a8ca6702652119c24c374d0f544de30fe6",
+      "bytes": 2939,
+      "sha256": "d9f7d3c37c661a8949c350d4a7ddb268679daa82c777b88a9f1f8ebd8a94d2cd"
+    },
+    "LICENSE": {
+      "path": "LICENCE",
+      "git_blob_sha1": "f5b9fd9aefdf12e18d64f6c5e5d882ecc9b904cf",
+      "bytes": 1080,
+      "sha256": "1d71c979f8aa68a3d916ff2da7f3a601b22975c7afc759ae2e4252c4e3b157de"
+    }
+  }
+}

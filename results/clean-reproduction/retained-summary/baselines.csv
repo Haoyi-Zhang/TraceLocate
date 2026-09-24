@@ -1,0 +1,5 @@
+method,declared_feasible,actually_covered,false_coverage,missed_feasible,above_true_minimum,cpu_seconds
+deletion,85,85,0,0,0,0.467227858
+none,105,50,55,0,0,0.14548708500000151
+marked,85,61,24,0,0,0.22157396900000081
+marginal,57,57,0,28,0,0.7939455760000015

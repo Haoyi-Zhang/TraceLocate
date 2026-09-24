@@ -1,0 +1,22 @@
+{
+  "source_repository": "https://github.com/ben-marshall/uart",
+  "source_commit": "5fd2db850a41b65aa34f3a31c663fc8704c7abd8",
+  "records": [
+    {
+      "file": "uart_tx.v",
+      "upstream_bytes": 5268,
+      "upstream_git_blob": "89906d6c5059a592dd086bbf60997368375cd1bb",
+      "generated_bytes": 5255,
+      "generated_sha256": "ab14142b94333d709da348102903776e1212799f4747a67a4a41e4502fae553d",
+      "rewrite": "move existing parameters to ANSI module parameter list only"
+    },
+    {
+      "file": "uart_rx.v",
+      "upstream_bytes": 5718,
+      "upstream_git_blob": "1cb2eadcb544f57864b29d380e893f92fac5f38c",
+      "generated_bytes": 5705,
+      "generated_sha256": "04f7c69b31da41038acbab296938c5cd0e5045e75f0bdc4b4966dc6f88d92d32",
+      "rewrite": "move existing parameters to ANSI module parameter list only"
+    }
+  ]
+}

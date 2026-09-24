@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/ben-marshall/uart",
+  "commit": "5fd2db850a41b65aa34f3a31c663fc8704c7abd8",
+  "files": {
+    "rtl/uart_tx.v": {"blob": "89906d6c5059a592dd086bbf60997368375cd1bb", "bytes": 5268},
+    "rtl/uart_rx.v": {"blob": "1cb2eadcb544f57864b29d380e893f92fac5f38c", "bytes": 5718},
+    "LICENSE": {"blob": "22b2e46c610d85f568e402c0c556821676d55253", "bytes": 1069}
+  },
+  "license": "MIT",
+  "acquired": "2026-09-15",
+  "integration": "unmodified upstream RTL; separate local testbench and trace importer"
+}

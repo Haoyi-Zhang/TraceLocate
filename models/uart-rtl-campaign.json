@@ -1,0 +1,416 @@
+{
+  "cases": [
+    {
+      "id": "uart-h16-d0-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 0,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d0-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 0,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d0-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 0,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d0-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 0,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d1-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 1,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d1-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 1,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d1-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 1,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d1-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 1,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d1-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 1,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d1-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 1,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d1-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 1,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d1-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 1,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d0-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 0,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d0-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 0,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d0-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 0,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d0-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 0,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d1-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 1,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d1-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 1,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d1-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 1,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d1-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 1,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o01-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o01-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o01-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o01-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "name": "public-rtl-uart-loopback",
+  "source_manifest": "rtl/ben-marshall-uart/trace_manifest.json"
+}

@@ -1,0 +1,13 @@
+{
+  "campaign_sha256": "299fd14a45a9dd55d65e328427d68a07d924a4afb877b329fe8c5eef5e878092",
+  "candidate_taps": 12,
+  "captured_rows": 1584,
+  "cases": 28,
+  "classes": 6,
+  "contexts": 3,
+  "maximum_h_plus_offset": 32,
+  "model_sha256": "30d7b38c5c1fbeba53fb368c194663504e8ecd7d3c680f1d6b273edef0c59b25",
+  "raw_traces": 33,
+  "rows_per_trace": 48,
+  "variants": 11
+}

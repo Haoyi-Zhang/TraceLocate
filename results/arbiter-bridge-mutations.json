@@ -1,0 +1,30 @@
+{
+  "mutations": [
+    {
+      "mutation": "pinned-source-byte",
+      "rejected": true
+    },
+    {
+      "mutation": "raw-trace-bit",
+      "rejected": true
+    },
+    {
+      "mutation": "fault-declaration",
+      "rejected": true
+    },
+    {
+      "mutation": "imported-model-cell",
+      "rejected": true
+    },
+    {
+      "mutation": "arbiter-campaign-member",
+      "rejected": true
+    },
+    {
+      "mutation": "combined-campaign-member",
+      "rejected": true
+    }
+  ],
+  "rejected": 6,
+  "status": "passed"
+}

@@ -1,0 +1,686 @@
+{
+  "capture": {
+    "bit_order": "tap 0 is the least-significant bit of row",
+    "clock_edge": "posedge after a one-time-unit nonblocking-assignment settle",
+    "deletion_unit": "one complete 12-tap synchronized row",
+    "rows": 48,
+    "testbench": "rtl/ben-marshall-uart/trace_tb.sv",
+    "timestamps_in_model": false
+  },
+  "contexts": [
+    {
+      "name": "payload-5",
+      "payload": 5
+    },
+    {
+      "name": "payload-a",
+      "payload": 10
+    },
+    {
+      "name": "payload-3",
+      "payload": 3
+    }
+  ],
+  "resolved_faults": {
+    "payload-3": {
+      "line_early": {
+        "class": "serial_interconnect_transient",
+        "cycle": 7,
+        "kind": 1,
+        "value": 1
+      },
+      "line_late": {
+        "class": "serial_interconnect_transient",
+        "cycle": 17,
+        "kind": 1,
+        "value": 1
+      },
+      "rx_sample_early": {
+        "class": "rx_sample_state_transient",
+        "cycle": 12,
+        "kind": 5,
+        "value": 0
+      },
+      "rx_sample_late": {
+        "class": "rx_sample_state_transient",
+        "cycle": 17,
+        "kind": 5,
+        "value": 0
+      },
+      "rx_state_idle": {
+        "class": "rx_control_state_transient",
+        "cycle": 12,
+        "kind": 4,
+        "value": 0
+      },
+      "rx_state_stop": {
+        "class": "rx_control_state_transient",
+        "cycle": 17,
+        "kind": 4,
+        "value": 3
+      },
+      "tx_data_early": {
+        "class": "tx_payload_state_transient",
+        "cycle": 10,
+        "kind": 3,
+        "value": 0
+      },
+      "tx_data_late": {
+        "class": "tx_payload_state_transient",
+        "cycle": 17,
+        "kind": 3,
+        "value": 1
+      },
+      "tx_state_idle": {
+        "class": "tx_control_state_transient",
+        "cycle": 12,
+        "kind": 2,
+        "value": 0
+      },
+      "tx_state_stop": {
+        "class": "tx_control_state_transient",
+        "cycle": 17,
+        "kind": 2,
+        "value": 3
+      }
+    },
+    "payload-5": {
+      "line_early": {
+        "class": "serial_interconnect_transient",
+        "cycle": 7,
+        "kind": 1,
+        "value": 1
+      },
+      "line_late": {
+        "class": "serial_interconnect_transient",
+        "cycle": 17,
+        "kind": 1,
+        "value": 1
+      },
+      "rx_sample_early": {
+        "class": "rx_sample_state_transient",
+        "cycle": 12,
+        "kind": 5,
+        "value": 0
+      },
+      "rx_sample_late": {
+        "class": "rx_sample_state_transient",
+        "cycle": 17,
+        "kind": 5,
+        "value": 1
+      },
+      "rx_state_idle": {
+        "class": "rx_control_state_transient",
+        "cycle": 12,
+        "kind": 4,
+        "value": 0
+      },
+      "rx_state_stop": {
+        "class": "rx_control_state_transient",
+        "cycle": 17,
+        "kind": 4,
+        "value": 3
+      },
+      "tx_data_early": {
+        "class": "tx_payload_state_transient",
+        "cycle": 10,
+        "kind": 3,
+        "value": 1
+      },
+      "tx_data_late": {
+        "class": "tx_payload_state_transient",
+        "cycle": 17,
+        "kind": 3,
+        "value": 0
+      },
+      "tx_state_idle": {
+        "class": "tx_control_state_transient",
+        "cycle": 12,
+        "kind": 2,
+        "value": 0
+      },
+      "tx_state_stop": {
+        "class": "tx_control_state_transient",
+        "cycle": 17,
+        "kind": 2,
+        "value": 3
+      }
+    },
+    "payload-a": {
+      "line_early": {
+        "class": "serial_interconnect_transient",
+        "cycle": 7,
+        "kind": 1,
+        "value": 1
+      },
+      "line_late": {
+        "class": "serial_interconnect_transient",
+        "cycle": 17,
+        "kind": 1,
+        "value": 1
+      },
+      "rx_sample_early": {
+        "class": "rx_sample_state_transient",
+        "cycle": 12,
+        "kind": 5,
+        "value": 1
+      },
+      "rx_sample_late": {
+        "class": "rx_sample_state_transient",
+        "cycle": 17,
+        "kind": 5,
+        "value": 0
+      },
+      "rx_state_idle": {
+        "class": "rx_control_state_transient",
+        "cycle": 12,
+        "kind": 4,
+        "value": 0
+      },
+      "rx_state_stop": {
+        "class": "rx_control_state_transient",
+        "cycle": 17,
+        "kind": 4,
+        "value": 3
+      },
+      "tx_data_early": {
+        "class": "tx_payload_state_transient",
+        "cycle": 10,
+        "kind": 3,
+        "value": 0
+      },
+      "tx_data_late": {
+        "class": "tx_payload_state_transient",
+        "cycle": 17,
+        "kind": 3,
+        "value": 1
+      },
+      "tx_state_idle": {
+        "class": "tx_control_state_transient",
+        "cycle": 12,
+        "kind": 2,
+        "value": 0
+      },
+      "tx_state_stop": {
+        "class": "tx_control_state_transient",
+        "cycle": 17,
+        "kind": 2,
+        "value": 3
+      }
+    }
+  },
+  "schema": 1,
+  "simulator": {
+    "compile_command": [
+      "iverilog",
+      "-g2012",
+      "-s",
+      "trace_tb",
+      "-o",
+      "${REPO}/rtl/ben-marshall-uart/generated/trace_tb.vvp",
+      "${REPO}/rtl/ben-marshall-uart/generated/uart_tx.v",
+      "${REPO}/rtl/ben-marshall-uart/generated/uart_rx.v",
+      "${REPO}/rtl/ben-marshall-uart/trace_tb.sv"
+    ],
+    "compile_log_sha256": "e75f5c85c8a8c09c0fd27e49d2043628dea589b61c841322cca4070b3716c831",
+    "executable": "iverilog",
+    "version": "Icarus Verilog version 13.0 (stable) (v13_0)\n\nCopyright (c) 2000-2026 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Preprocessor version 13.0 (stable) (v13_0)\n\nCopyright (c) 1999-2026 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Parser/Elaborator version 13.0 (stable) (v13_0)\n\nCopyright (c) 1998-2026 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\n FLAGS DLL vvp.tgt\nvvp.tgt: Icarus Verilog VVP Code Generator 13.0 (stable) (v13_0)\n\nCopyright (c) 2001-2026 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
+  },
+  "source": {
+    "commit": "5fd2db850a41b65aa34f3a31c663fc8704c7abd8",
+    "compatibility_manifest": "rtl/ben-marshall-uart/generated/manifest.json",
+    "license": "MIT",
+    "repository": "https://github.com/ben-marshall/uart",
+    "upstream_manifest": "rtl/ben-marshall-uart/upstream/SOURCE.json"
+  },
+  "traces": {
+    "payload-3": {
+      "line_early": {
+        "bytes": 1617,
+        "fault_cycle": 7,
+        "fault_fired": 1,
+        "fault_kind": 1,
+        "fault_value": 1,
+        "file": "traces/payload-3/line_early.csv",
+        "rx_data_final": 3,
+        "rx_valid_count": 1,
+        "sha256": "6d41077f4795989ea131a40c668f39ba02f098250c43da6ac2625c0107fda4cd",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=3",
+        "unknown_rows": 0
+      },
+      "line_late": {
+        "bytes": 1617,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 1,
+        "fault_value": 1,
+        "file": "traces/payload-3/line_late.csv",
+        "rx_data_final": 3,
+        "rx_valid_count": 1,
+        "sha256": "fd669ff4ca51e449b6b17f94f4a0a91cdd5b92be738a1bfd51970c0dde27ca59",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=3",
+        "unknown_rows": 0
+      },
+      "nominal": {
+        "bytes": 1617,
+        "fault_cycle": -1,
+        "fault_fired": 0,
+        "fault_kind": 0,
+        "fault_value": 0,
+        "file": "traces/payload-3/nominal.csv",
+        "rx_data_final": 3,
+        "rx_valid_count": 1,
+        "sha256": "448e1fea02d6dc87efe4eff59b51deeddc54be6ae437b96a19ddb64b49ce1877",
+        "simulator_stdout": "RESULT rows=48 fired=0 unknown=0 rx_valid=1 rx_data=3",
+        "unknown_rows": 0
+      },
+      "rx_sample_early": {
+        "bytes": 1617,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 5,
+        "fault_value": 0,
+        "file": "traces/payload-3/rx_sample_early.csv",
+        "rx_data_final": 2,
+        "rx_valid_count": 1,
+        "sha256": "a3fe6e0ba7c605e0d8527d1d281f582e06c8f9438e603a41b2ec2d08c75cc495",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=2",
+        "unknown_rows": 0
+      },
+      "rx_sample_late": {
+        "bytes": 1617,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 5,
+        "fault_value": 0,
+        "file": "traces/payload-3/rx_sample_late.csv",
+        "rx_data_final": 1,
+        "rx_valid_count": 1,
+        "sha256": "2d54bc8aca8465326c4b00d475c58036c2c3374bb6df433564281d47f95f44de",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=1",
+        "unknown_rows": 0
+      },
+      "rx_state_idle": {
+        "bytes": 1617,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 4,
+        "fault_value": 0,
+        "file": "traces/payload-3/rx_state_idle.csv",
+        "rx_data_final": 12,
+        "rx_valid_count": 1,
+        "sha256": "9e09a8f1f741668f232f4c0a1d65b088a42706782afbeb0c5dad4b62a20de612",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=12",
+        "unknown_rows": 0
+      },
+      "rx_state_stop": {
+        "bytes": 1615,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 4,
+        "fault_value": 3,
+        "file": "traces/payload-3/rx_state_stop.csv",
+        "rx_data_final": 14,
+        "rx_valid_count": 2,
+        "sha256": "ce5e90fa3bb856be6059c726d92dd305a94aff1e4d5e70ef91ade8754d6a71cb",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=2 rx_data=14",
+        "unknown_rows": 0
+      },
+      "tx_data_early": {
+        "bytes": 1617,
+        "fault_cycle": 10,
+        "fault_fired": 1,
+        "fault_kind": 3,
+        "fault_value": 0,
+        "file": "traces/payload-3/tx_data_early.csv",
+        "rx_data_final": 1,
+        "rx_valid_count": 1,
+        "sha256": "dfd7285f5a1fc89a7da1326bc60264cf3841933e3b8a9b8071b33d5a254133a6",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=1",
+        "unknown_rows": 0
+      },
+      "tx_data_late": {
+        "bytes": 1617,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 3,
+        "fault_value": 1,
+        "file": "traces/payload-3/tx_data_late.csv",
+        "rx_data_final": 7,
+        "rx_valid_count": 1,
+        "sha256": "9492f2e4c1fcf85cb481fefff862889dfeb6254562455d2437e8b4ac19efaf4f",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=7",
+        "unknown_rows": 0
+      },
+      "tx_state_idle": {
+        "bytes": 1617,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 2,
+        "fault_value": 0,
+        "file": "traces/payload-3/tx_state_idle.csv",
+        "rx_data_final": 15,
+        "rx_valid_count": 1,
+        "sha256": "f42e45f730eef1db40c65fd95d23e27c6be5a27dfa7a8c7b49ab16128b39042b",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=15",
+        "unknown_rows": 0
+      },
+      "tx_state_stop": {
+        "bytes": 1617,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 2,
+        "fault_value": 3,
+        "file": "traces/payload-3/tx_state_stop.csv",
+        "rx_data_final": 15,
+        "rx_valid_count": 1,
+        "sha256": "d3570eb17e5e72e9a707783ec1368f55716c98d021360df69c84c492236e878a",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=15",
+        "unknown_rows": 0
+      }
+    },
+    "payload-5": {
+      "line_early": {
+        "bytes": 1617,
+        "fault_cycle": 7,
+        "fault_fired": 1,
+        "fault_kind": 1,
+        "fault_value": 1,
+        "file": "traces/payload-5/line_early.csv",
+        "rx_data_final": 5,
+        "rx_valid_count": 1,
+        "sha256": "acd7af6d260a70c25df2691ec13183e30d9b750ae064ac2bbe64bb9a0c62f9d0",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=5",
+        "unknown_rows": 0
+      },
+      "line_late": {
+        "bytes": 1617,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 1,
+        "fault_value": 1,
+        "file": "traces/payload-5/line_late.csv",
+        "rx_data_final": 5,
+        "rx_valid_count": 1,
+        "sha256": "e56ba9a89d359f08e91614df4bfeaa44d5c1ffd5032578ce17914b2be0ed80c2",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=5",
+        "unknown_rows": 0
+      },
+      "nominal": {
+        "bytes": 1617,
+        "fault_cycle": -1,
+        "fault_fired": 0,
+        "fault_kind": 0,
+        "fault_value": 0,
+        "file": "traces/payload-5/nominal.csv",
+        "rx_data_final": 5,
+        "rx_valid_count": 1,
+        "sha256": "c17d6f24465bb3f2da950a3f15b17be208cbaa9c28d393fb5b5ef2bd07802995",
+        "simulator_stdout": "RESULT rows=48 fired=0 unknown=0 rx_valid=1 rx_data=5",
+        "unknown_rows": 0
+      },
+      "rx_sample_early": {
+        "bytes": 1617,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 5,
+        "fault_value": 0,
+        "file": "traces/payload-5/rx_sample_early.csv",
+        "rx_data_final": 4,
+        "rx_valid_count": 1,
+        "sha256": "7781c708f39dc92b858632dae0ca6d2224451d89072f508957df2cfa00929aca",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=4",
+        "unknown_rows": 0
+      },
+      "rx_sample_late": {
+        "bytes": 1617,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 5,
+        "fault_value": 1,
+        "file": "traces/payload-5/rx_sample_late.csv",
+        "rx_data_final": 7,
+        "rx_valid_count": 1,
+        "sha256": "35ed7ffe19d63180a85e4c4c1a24e4c54fa7a1fcf643b89327e3c080bcfc6e52",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=7",
+        "unknown_rows": 0
+      },
+      "rx_state_idle": {
+        "bytes": 1617,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 4,
+        "fault_value": 0,
+        "file": "traces/payload-5/rx_state_idle.csv",
+        "rx_data_final": 9,
+        "rx_valid_count": 1,
+        "sha256": "3255c94a7e52e1d449d4ad390067eb799609770fd3a54e1258a636b5cb80d759",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=9",
+        "unknown_rows": 0
+      },
+      "rx_state_stop": {
+        "bytes": 1604,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 4,
+        "fault_value": 3,
+        "file": "traces/payload-5/rx_state_stop.csv",
+        "rx_data_final": 8,
+        "rx_valid_count": 1,
+        "sha256": "a345aed938e83d05967b1d455a42c48c0490f7652f843d98c454aebaf06c33f5",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=8",
+        "unknown_rows": 0
+      },
+      "tx_data_early": {
+        "bytes": 1617,
+        "fault_cycle": 10,
+        "fault_fired": 1,
+        "fault_kind": 3,
+        "fault_value": 1,
+        "file": "traces/payload-5/tx_data_early.csv",
+        "rx_data_final": 7,
+        "rx_valid_count": 1,
+        "sha256": "4d5f3ced96d9682eb478ef940b722b409d064835158ef81da9c2e86f9dc7bf19",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=7",
+        "unknown_rows": 0
+      },
+      "tx_data_late": {
+        "bytes": 1617,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 3,
+        "fault_value": 0,
+        "file": "traces/payload-5/tx_data_late.csv",
+        "rx_data_final": 1,
+        "rx_valid_count": 1,
+        "sha256": "7502feadb72a3dc041ebab49f28009b231d9235948d462871e978068b23c62ea",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=1",
+        "unknown_rows": 0
+      },
+      "tx_state_idle": {
+        "bytes": 1617,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 2,
+        "fault_value": 0,
+        "file": "traces/payload-5/tx_state_idle.csv",
+        "rx_data_final": 15,
+        "rx_valid_count": 1,
+        "sha256": "f7f5692c09d72c3e5369e9aec2315bdff5fbec4e0cdfc1f2a12ae7433cadd9a0",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=15",
+        "unknown_rows": 0
+      },
+      "tx_state_stop": {
+        "bytes": 1617,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 2,
+        "fault_value": 3,
+        "file": "traces/payload-5/tx_state_stop.csv",
+        "rx_data_final": 13,
+        "rx_valid_count": 1,
+        "sha256": "651f34ed6591456e8bd0030fc93335730e28295efbdf8f26880ba3dd367c0368",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=13",
+        "unknown_rows": 0
+      }
+    },
+    "payload-a": {
+      "line_early": {
+        "bytes": 1614,
+        "fault_cycle": 7,
+        "fault_fired": 1,
+        "fault_kind": 1,
+        "fault_value": 1,
+        "file": "traces/payload-a/line_early.csv",
+        "rx_data_final": 10,
+        "rx_valid_count": 1,
+        "sha256": "ff2f5cf14dc24df0dd571547e35349455d688691257103fae72293833f5e8d9f",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=10",
+        "unknown_rows": 0
+      },
+      "line_late": {
+        "bytes": 1614,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 1,
+        "fault_value": 1,
+        "file": "traces/payload-a/line_late.csv",
+        "rx_data_final": 10,
+        "rx_valid_count": 1,
+        "sha256": "4ca4e36c61d9e6cc38305b6dfa7fb41f16813abaddbbf1fc188c00a5e7026d4a",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=10",
+        "unknown_rows": 0
+      },
+      "nominal": {
+        "bytes": 1614,
+        "fault_cycle": -1,
+        "fault_fired": 0,
+        "fault_kind": 0,
+        "fault_value": 0,
+        "file": "traces/payload-a/nominal.csv",
+        "rx_data_final": 10,
+        "rx_valid_count": 1,
+        "sha256": "c2412a248cb0a92a71ba3aefc58b0421a67f8c54a965e37468d65a7cddd5ee54",
+        "simulator_stdout": "RESULT rows=48 fired=0 unknown=0 rx_valid=1 rx_data=10",
+        "unknown_rows": 0
+      },
+      "rx_sample_early": {
+        "bytes": 1614,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 5,
+        "fault_value": 1,
+        "file": "traces/payload-a/rx_sample_early.csv",
+        "rx_data_final": 11,
+        "rx_valid_count": 1,
+        "sha256": "758f874a7d5870f1cc0e5daa33a7e9afcd71c0cecd302541e3bfa9ee72bba507",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=11",
+        "unknown_rows": 0
+      },
+      "rx_sample_late": {
+        "bytes": 1614,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 5,
+        "fault_value": 0,
+        "file": "traces/payload-a/rx_sample_late.csv",
+        "rx_data_final": 8,
+        "rx_valid_count": 1,
+        "sha256": "026e797339b532526b3216590d6df5962dcc4a7a0905cac0ded76c0995eea78e",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=8",
+        "unknown_rows": 0
+      },
+      "rx_state_idle": {
+        "bytes": 1603,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 4,
+        "fault_value": 0,
+        "file": "traces/payload-a/rx_state_idle.csv",
+        "rx_data_final": 15,
+        "rx_valid_count": 1,
+        "sha256": "0a784638e903f674e2a1abd6df15d7e70b72aae51f184613936def18d5155caa",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=15",
+        "unknown_rows": 0
+      },
+      "rx_state_stop": {
+        "bytes": 1612,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 4,
+        "fault_value": 3,
+        "file": "traces/payload-a/rx_state_stop.csv",
+        "rx_data_final": 15,
+        "rx_valid_count": 2,
+        "sha256": "b093e28e55e9c9f0ac1e25afedafe8010711ecc87584b0f1d71caea8fe108e8a",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=2 rx_data=15",
+        "unknown_rows": 0
+      },
+      "tx_data_early": {
+        "bytes": 1614,
+        "fault_cycle": 10,
+        "fault_fired": 1,
+        "fault_kind": 3,
+        "fault_value": 0,
+        "file": "traces/payload-a/tx_data_early.csv",
+        "rx_data_final": 8,
+        "rx_valid_count": 1,
+        "sha256": "50144b0f34c1c0c060acfc5caf78cd421e21a3de9ba99a11a4092c09740b8b63",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=8",
+        "unknown_rows": 0
+      },
+      "tx_data_late": {
+        "bytes": 1614,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 3,
+        "fault_value": 1,
+        "file": "traces/payload-a/tx_data_late.csv",
+        "rx_data_final": 14,
+        "rx_valid_count": 1,
+        "sha256": "ede749478c73d221375452b5ff824de220878c72ec9cb9b64b9f0f4316c9beda",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=14",
+        "unknown_rows": 0
+      },
+      "tx_state_idle": {
+        "bytes": 1614,
+        "fault_cycle": 12,
+        "fault_fired": 1,
+        "fault_kind": 2,
+        "fault_value": 0,
+        "file": "traces/payload-a/tx_state_idle.csv",
+        "rx_data_final": 14,
+        "rx_valid_count": 1,
+        "sha256": "196ec6574b6cf5caee10b763a81b933bfd9799fdc323a910429ecd303a056a63",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=14",
+        "unknown_rows": 0
+      },
+      "tx_state_stop": {
+        "bytes": 1614,
+        "fault_cycle": 17,
+        "fault_fired": 1,
+        "fault_kind": 2,
+        "fault_value": 3,
+        "file": "traces/payload-a/tx_state_stop.csv",
+        "rx_data_final": 14,
+        "rx_valid_count": 1,
+        "sha256": "8894290c1867d89a768ed3e17e49d7e2b8620b7202d264051e220fce2b1793f0",
+        "simulator_stdout": "RESULT rows=48 fired=1 unknown=0 rx_valid=1 rx_data=14",
+        "unknown_rows": 0
+      }
+    }
+  },
+  "variant_order": [
+    "nominal",
+    "line_early",
+    "line_late",
+    "tx_state_idle",
+    "tx_state_stop",
+    "tx_data_early",
+    "tx_data_late",
+    "rx_state_idle",
+    "rx_state_stop",
+    "rx_sample_early",
+    "rx_sample_late"
+  ]
+}

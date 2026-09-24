@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "lcs_deletion_equivalence_checks": 30948,
+  "projection_monotonicity_checks": 3651264,
+  "weighted_optimality_instances": 336,
+  "weighted_unsat_instances": 33,
+  "max_candidate_observations": 14,
+  "elapsed_seconds": 30.794931
+}

@@ -1,0 +1,1 @@
+{"accepted": true, "checked_transitions": 6, "classes": [["wrong_feedback", "rotate"]], "conclusion": "the witnessed initial executions agree for every input word and horizon", "relation_states": 3}

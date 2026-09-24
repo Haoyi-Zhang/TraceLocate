@@ -1,0 +1,4 @@
+${REPO}/rtl/ben-marshall-uart/trace_tb.sv:63: vvp.tgt sorry: procedural continuous assignments are not yet fully supported. The RHS of this assignment will only be evaluated once, at the time the assignment statement is executed.
+${REPO}/rtl/ben-marshall-uart/trace_tb.sv:64: vvp.tgt sorry: procedural continuous assignments are not yet fully supported. The RHS of this assignment will only be evaluated once, at the time the assignment statement is executed.
+${REPO}/rtl/ben-marshall-uart/trace_tb.sv:65: vvp.tgt sorry: procedural continuous assignments are not yet fully supported. The RHS of this assignment will only be evaluated once, at the time the assignment statement is executed.
+${REPO}/rtl/ben-marshall-uart/trace_tb.sv:66: vvp.tgt sorry: procedural continuous assignments are not yet fully supported. The RHS of this assignment will only be evaluated once, at the time the assignment statement is executed.

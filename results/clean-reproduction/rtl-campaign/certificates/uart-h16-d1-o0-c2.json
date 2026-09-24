@@ -1,0 +1,1 @@
+{"model":"uart-loopback-rtl","spec":{"contexts":[2],"d":1,"h":16,"offsets":[0]},"full_margin":{"loss":0,"mask":4095,"pair":[0,0,0,1,1],"alignment":[[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15]],"below":[]},"status":"infeasible","mask":null,"cost":null,"obstructions":[],"coverage":[]}

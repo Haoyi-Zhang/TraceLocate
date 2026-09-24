@@ -1,0 +1,6 @@
+{
+  "model": "lfsr",
+  "variants": ["wrong_feedback", "rotate"],
+  "initial": [3, 3],
+  "relation": [[3, 3], [5, 5], [6, 6]]
+}

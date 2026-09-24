@@ -1,0 +1,14 @@
+{
+  "all_exit_codes": 0,
+  "campaign_cases": 432,
+  "single_certificate": "accepted",
+  "alias_certificate": "accepted",
+  "figure_input_files_equal": [
+    "coverage.csv",
+    "local-checking.csv",
+    "mechanism-rows.tex",
+    "baseline-rows.tex"
+  ],
+  "comparison": "byte equality between clean-repository exports and manuscript inputs",
+  "scope": "Documented auxiliary commands executed from a separately extracted standalone repository; no paper dependency for scientific checks."
+}

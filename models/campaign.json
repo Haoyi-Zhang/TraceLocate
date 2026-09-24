@@ -1,0 +1,6486 @@
+{
+  "selection": "all six mechanisms; horizons 4,8,12; losses 0,1,2; known/uncertain offset; each of three scripts and their conjunction",
+  "seed": null,
+  "cases": [
+    {
+      "id": "counter-h4-d0-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d0-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d0-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d0-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d0-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d0-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d0-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d0-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d1-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d1-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d1-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d1-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d1-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d1-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d1-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d1-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d2-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d2-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d2-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d2-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d2-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d2-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d2-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h4-d2-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d0-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d0-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d0-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d0-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d0-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d0-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d0-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d0-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d1-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d1-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d1-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d1-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d1-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d1-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d1-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d1-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d2-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d2-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d2-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d2-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d2-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d2-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d2-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h8-d2-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d0-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d0-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d0-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d0-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d0-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d0-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d0-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d0-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d1-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d1-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d1-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d1-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d1-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d1-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d1-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d1-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d2-o1-c0",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d2-o1-c1",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d2-o1-c2",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d2-o1-c012",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d2-o2-c0",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d2-o2-c1",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d2-o2-c2",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "counter-h12-d2-o2-c012",
+      "model": "counter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d0-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d0-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d0-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d0-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d0-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d0-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d0-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d0-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d1-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d1-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d1-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d1-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d1-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d1-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d1-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d1-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d2-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d2-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d2-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d2-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d2-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d2-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d2-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h4-d2-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d0-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d0-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d0-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d0-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d0-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d0-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d0-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d0-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d1-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d1-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d1-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d1-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d1-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d1-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d1-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d1-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d2-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d2-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d2-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d2-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d2-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d2-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d2-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h8-d2-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d0-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d0-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d0-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d0-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d0-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d0-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d0-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d0-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d1-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d1-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d1-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d1-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d1-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d1-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d1-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d1-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d2-o1-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d2-o1-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d2-o1-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d2-o1-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d2-o2-c0",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d2-o2-c1",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d2-o2-c2",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "fifo-h12-d2-o2-c012",
+      "model": "fifo",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d0-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d0-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d0-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d0-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d0-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d0-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d0-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d0-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d1-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d1-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d1-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d1-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d1-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d1-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d1-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d1-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d2-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d2-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d2-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d2-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d2-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d2-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d2-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h4-d2-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d0-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d0-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d0-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d0-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d0-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d0-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d0-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d0-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d1-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d1-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d1-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d1-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d1-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d1-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d1-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d1-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d2-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d2-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d2-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d2-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d2-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d2-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d2-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h8-d2-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d0-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d0-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d0-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d0-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d0-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d0-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d0-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d0-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d1-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d1-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d1-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d1-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d1-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d1-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d1-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d1-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d2-o1-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d2-o1-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d2-o1-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d2-o1-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d2-o2-c0",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d2-o2-c1",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d2-o2-c2",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "arbiter-h12-d2-o2-c012",
+      "model": "arbiter",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d0-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d0-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d0-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d0-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d0-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d0-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d0-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d0-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d1-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d1-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d1-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d1-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d1-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d1-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d1-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d1-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d2-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d2-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d2-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d2-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d2-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d2-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d2-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h4-d2-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d0-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d0-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d0-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d0-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d0-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d0-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d0-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d0-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d1-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d1-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d1-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d1-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d1-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d1-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d1-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d1-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d2-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d2-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d2-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d2-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d2-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d2-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d2-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h8-d2-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d0-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d0-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d0-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d0-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d0-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d0-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d0-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d0-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d1-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d1-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d1-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d1-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d1-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d1-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d1-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d1-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d2-o1-c0",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d2-o1-c1",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d2-o1-c2",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d2-o1-c012",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d2-o2-c0",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d2-o2-c1",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d2-o2-c2",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "credit-h12-d2-o2-c012",
+      "model": "credit",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d0-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d0-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d0-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d0-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d0-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d0-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d0-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d0-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d1-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d1-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d1-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d1-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d1-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d1-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d1-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d1-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d2-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d2-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d2-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d2-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d2-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d2-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d2-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h4-d2-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d0-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d0-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d0-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d0-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d0-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d0-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d0-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d0-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d1-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d1-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d1-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d1-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d1-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d1-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d1-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d1-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d2-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d2-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d2-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d2-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d2-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d2-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d2-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h8-d2-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d0-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d0-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d0-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d0-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d0-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d0-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d0-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d0-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d1-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d1-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d1-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d1-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d1-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d1-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d1-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d1-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d2-o1-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d2-o1-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d2-o1-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d2-o1-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d2-o2-c0",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d2-o2-c1",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d2-o2-c2",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "handshake-h12-d2-o2-c012",
+      "model": "handshake",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d0-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d0-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d0-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d0-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d0-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d0-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d0-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d0-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d1-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d1-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d1-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d1-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d1-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d1-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d1-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d1-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d2-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d2-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d2-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d2-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d2-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d2-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d2-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h4-d2-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 4,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d0-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d0-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d0-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d0-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d0-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d0-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d0-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d0-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d1-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d1-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d1-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d1-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d1-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d1-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d1-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d1-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d2-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d2-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d2-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d2-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d2-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d2-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d2-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h8-d2-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 8,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d0-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d0-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d0-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d0-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d0-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d0-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d0-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d0-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 0,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d1-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d1-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d1-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d1-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d1-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d1-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d1-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d1-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 1,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d2-o1-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d2-o1-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d2-o1-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d2-o1-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d2-o2-c0",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d2-o2-c1",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d2-o2-c2",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "lfsr-h12-d2-o2-c012",
+      "model": "lfsr",
+      "spec": {
+        "h": 12,
+        "d": 2,
+        "offsets": [
+          0,
+          1
+        ],
+        "contexts": [
+          0,
+          1,
+          2
+        ]
+      }
+    }
+  ]
+}

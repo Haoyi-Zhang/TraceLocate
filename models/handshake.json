@@ -1,0 +1,452 @@
+{
+  "name": "handshake",
+  "origin": "original synthetic finite-state mechanism fixture",
+  "row_convention": "output on a transition, after the stated successor computation",
+  "taps": [
+    {
+      "name": "state0",
+      "cost": 1
+    },
+    {
+      "name": "state1",
+      "cost": 1
+    },
+    {
+      "name": "request",
+      "cost": 1
+    },
+    {
+      "name": "ack",
+      "cost": 1
+    },
+    {
+      "name": "ack_edge",
+      "cost": 1
+    },
+    {
+      "name": "start",
+      "cost": 1
+    }
+  ],
+  "classes": [
+    {
+      "name": "nominal",
+      "variants": [
+        "nominal"
+      ]
+    },
+    {
+      "name": "skip_armed",
+      "variants": [
+        "skip_armed"
+      ]
+    },
+    {
+      "name": "ignore_ready",
+      "variants": [
+        "ignore_ready"
+      ]
+    },
+    {
+      "name": "sticky_done",
+      "variants": [
+        "sticky_done"
+      ]
+    }
+  ],
+  "variants": {
+    "nominal": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 1,
+            "row": 37
+          },
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 1,
+            "row": 37
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 3,
+            "row": 27
+          },
+          {
+            "next": 3,
+            "row": 59
+          }
+        ],
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 0,
+            "row": 32
+          },
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 0,
+            "row": 32
+          }
+        ]
+      ]
+    },
+    "skip_armed": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 2,
+            "row": 38
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 3,
+            "row": 27
+          },
+          {
+            "next": 3,
+            "row": 59
+          }
+        ],
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 0,
+            "row": 32
+          },
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 0,
+            "row": 32
+          }
+        ]
+      ]
+    },
+    "ignore_ready": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 1,
+            "row": 37
+          },
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 1,
+            "row": 37
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          }
+        ],
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 0,
+            "row": 32
+          },
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 0,
+            "row": 32
+          }
+        ]
+      ]
+    },
+    "sticky_done": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 1,
+            "row": 37
+          },
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 1,
+            "row": 37
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 6
+          },
+          {
+            "next": 2,
+            "row": 38
+          },
+          {
+            "next": 3,
+            "row": 27
+          },
+          {
+            "next": 3,
+            "row": 59
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 11
+          },
+          {
+            "next": 3,
+            "row": 43
+          },
+          {
+            "next": 3,
+            "row": 11
+          },
+          {
+            "next": 3,
+            "row": 43
+          }
+        ]
+      ]
+    }
+  },
+  "contexts": [
+    {
+      "name": "idle",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "alternating",
+      "inputs": [
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "name": "mixed",
+      "inputs": [
+        1,
+        1,
+        3,
+        2,
+        0,
+        2,
+        3,
+        1,
+        1,
+        3,
+        2,
+        0,
+        2,
+        3,
+        1,
+        1,
+        3,
+        2,
+        0,
+        2
+      ]
+    }
+  ]
+}

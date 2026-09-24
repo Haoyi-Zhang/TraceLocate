@@ -1,0 +1,848 @@
+{
+  "cases": [
+    {
+      "id": "uart-h16-d0-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 0,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d0-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 0,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d0-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 0,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d0-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 0,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d1-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 1,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d1-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 1,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d1-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 1,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h16-d1-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 1,
+        "h": 16,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d1-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 1,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d1-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 1,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d1-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 1,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d1-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 1,
+        "h": 24,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d0-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 0,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d0-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 0,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d0-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 0,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d0-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 0,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d1-o0-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 1,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d1-o0-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 1,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d1-o0-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 1,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h32-d1-o0-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 1,
+        "h": 32,
+        "offsets": [
+          0
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o01-c0",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o01-c1",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          1
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o01-c2",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          2
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "uart-h24-d0-o01-call",
+      "model": "uart-loopback-rtl",
+      "spec": {
+        "contexts": [
+          0,
+          1,
+          2
+        ],
+        "d": 0,
+        "h": 24,
+        "offsets": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating",
+        "contention",
+        "bursty"
+      ],
+      "horizon": 16,
+      "id": "arbiter-all-h16-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "All three request contexts and all five declaration classes."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating",
+        "contention",
+        "bursty"
+      ],
+      "horizon": 16,
+      "id": "arbiter-all-h16-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "All three request contexts and all five declaration classes."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating"
+      ],
+      "horizon": 16,
+      "id": "arbiter-rotating-h16-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating"
+      ],
+      "horizon": 16,
+      "id": "arbiter-rotating-h16-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "contention"
+      ],
+      "horizon": 16,
+      "id": "arbiter-contention-h16-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "contention"
+      ],
+      "horizon": 16,
+      "id": "arbiter-contention-h16-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "bursty"
+      ],
+      "horizon": 16,
+      "id": "arbiter-bursty-h16-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "bursty"
+      ],
+      "horizon": 16,
+      "id": "arbiter-bursty-h16-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating",
+        "contention",
+        "bursty"
+      ],
+      "horizon": 24,
+      "id": "arbiter-all-h24-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "All three request contexts and all five declaration classes."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating",
+        "contention",
+        "bursty"
+      ],
+      "horizon": 24,
+      "id": "arbiter-all-h24-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "All three request contexts and all five declaration classes."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating"
+      ],
+      "horizon": 24,
+      "id": "arbiter-rotating-h24-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating"
+      ],
+      "horizon": 24,
+      "id": "arbiter-rotating-h24-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "contention"
+      ],
+      "horizon": 24,
+      "id": "arbiter-contention-h24-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "contention"
+      ],
+      "horizon": 24,
+      "id": "arbiter-contention-h24-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "bursty"
+      ],
+      "horizon": 24,
+      "id": "arbiter-bursty-h24-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "bursty"
+      ],
+      "horizon": 24,
+      "id": "arbiter-bursty-h24-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating",
+        "contention",
+        "bursty"
+      ],
+      "horizon": 32,
+      "id": "arbiter-all-h32-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "All three request contexts and all five declaration classes."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating",
+        "contention",
+        "bursty"
+      ],
+      "horizon": 32,
+      "id": "arbiter-all-h32-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "All three request contexts and all five declaration classes."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating"
+      ],
+      "horizon": 32,
+      "id": "arbiter-rotating-h32-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "rotating"
+      ],
+      "horizon": 32,
+      "id": "arbiter-rotating-h32-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "contention"
+      ],
+      "horizon": 32,
+      "id": "arbiter-contention-h32-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "contention"
+      ],
+      "horizon": 32,
+      "id": "arbiter-contention-h32-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "bursty"
+      ],
+      "horizon": 32,
+      "id": "arbiter-bursty-h32-d0",
+      "loss": 0,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    },
+    {
+      "classes": [
+        "nominal",
+        "request-input transient",
+        "token-state transient",
+        "grant-register transient",
+        "select-register transient"
+      ],
+      "contexts": [
+        "bursty"
+      ],
+      "horizon": 32,
+      "id": "arbiter-bursty-h32-d1",
+      "loss": 1,
+      "model": "models/arbiter-rtl.json",
+      "note": "Context-restricted exact interface-selection control."
+    }
+  ],
+  "description": "Exact finite-language coverage tasks imported from two unrelated pinned public Verilog systems.",
+  "name": "two-system-public-rtl-campaign",
+  "sources": [
+    {
+      "cases": 28,
+      "name": "public-rtl-uart-loopback",
+      "path": "models/uart-rtl-campaign.json"
+    },
+    {
+      "cases": 24,
+      "name": "pinned-bmartini-arbiter-rtl-campaign",
+      "path": "models/arbiter-rtl-campaign.json"
+    }
+  ]
+}

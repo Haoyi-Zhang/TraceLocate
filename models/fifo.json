@@ -1,0 +1,460 @@
+{
+  "name": "fifo",
+  "origin": "original synthetic finite-state mechanism fixture",
+  "row_convention": "output on a transition, after the stated successor computation",
+  "taps": [
+    {
+      "name": "q0",
+      "cost": 1
+    },
+    {
+      "name": "q1",
+      "cost": 1
+    },
+    {
+      "name": "empty",
+      "cost": 1
+    },
+    {
+      "name": "full",
+      "cost": 1
+    },
+    {
+      "name": "push_ack",
+      "cost": 1
+    },
+    {
+      "name": "pop_ack",
+      "cost": 1
+    },
+    {
+      "name": "push_block",
+      "cost": 1
+    },
+    {
+      "name": "pop_block",
+      "cost": 1
+    }
+  ],
+  "classes": [
+    {
+      "name": "nominal",
+      "variants": [
+        "nominal"
+      ]
+    },
+    {
+      "name": "drop_push",
+      "variants": [
+        "drop_push"
+      ]
+    },
+    {
+      "name": "drop_pop",
+      "variants": [
+        "drop_pop"
+      ]
+    },
+    {
+      "name": "no_replace",
+      "variants": [
+        "no_replace"
+      ]
+    }
+  ],
+  "variants": {
+    "nominal": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 4
+          },
+          {
+            "next": 1,
+            "row": 17
+          },
+          {
+            "next": 0,
+            "row": 132
+          },
+          {
+            "next": 1,
+            "row": 145
+          }
+        ],
+        [
+          {
+            "next": 1,
+            "row": 1
+          },
+          {
+            "next": 2,
+            "row": 18
+          },
+          {
+            "next": 0,
+            "row": 36
+          },
+          {
+            "next": 1,
+            "row": 49
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 2
+          },
+          {
+            "next": 3,
+            "row": 27
+          },
+          {
+            "next": 1,
+            "row": 33
+          },
+          {
+            "next": 2,
+            "row": 50
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 11
+          },
+          {
+            "next": 3,
+            "row": 75
+          },
+          {
+            "next": 2,
+            "row": 34
+          },
+          {
+            "next": 3,
+            "row": 59
+          }
+        ]
+      ]
+    },
+    "drop_push": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 4
+          },
+          {
+            "next": 0,
+            "row": 68
+          },
+          {
+            "next": 0,
+            "row": 132
+          },
+          {
+            "next": 0,
+            "row": 196
+          }
+        ],
+        [
+          {
+            "next": 1,
+            "row": 1
+          },
+          {
+            "next": 1,
+            "row": 65
+          },
+          {
+            "next": 0,
+            "row": 36
+          },
+          {
+            "next": 0,
+            "row": 100
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 2
+          },
+          {
+            "next": 2,
+            "row": 66
+          },
+          {
+            "next": 1,
+            "row": 33
+          },
+          {
+            "next": 1,
+            "row": 97
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 11
+          },
+          {
+            "next": 3,
+            "row": 75
+          },
+          {
+            "next": 2,
+            "row": 34
+          },
+          {
+            "next": 2,
+            "row": 98
+          }
+        ]
+      ]
+    },
+    "drop_pop": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 4
+          },
+          {
+            "next": 1,
+            "row": 17
+          },
+          {
+            "next": 0,
+            "row": 132
+          },
+          {
+            "next": 1,
+            "row": 145
+          }
+        ],
+        [
+          {
+            "next": 1,
+            "row": 1
+          },
+          {
+            "next": 2,
+            "row": 18
+          },
+          {
+            "next": 1,
+            "row": 129
+          },
+          {
+            "next": 2,
+            "row": 146
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 2
+          },
+          {
+            "next": 3,
+            "row": 27
+          },
+          {
+            "next": 2,
+            "row": 130
+          },
+          {
+            "next": 3,
+            "row": 155
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 11
+          },
+          {
+            "next": 3,
+            "row": 75
+          },
+          {
+            "next": 3,
+            "row": 139
+          },
+          {
+            "next": 3,
+            "row": 203
+          }
+        ]
+      ]
+    },
+    "no_replace": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 4
+          },
+          {
+            "next": 1,
+            "row": 17
+          },
+          {
+            "next": 0,
+            "row": 132
+          },
+          {
+            "next": 1,
+            "row": 145
+          }
+        ],
+        [
+          {
+            "next": 1,
+            "row": 1
+          },
+          {
+            "next": 2,
+            "row": 18
+          },
+          {
+            "next": 0,
+            "row": 36
+          },
+          {
+            "next": 1,
+            "row": 49
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 2
+          },
+          {
+            "next": 3,
+            "row": 27
+          },
+          {
+            "next": 1,
+            "row": 33
+          },
+          {
+            "next": 2,
+            "row": 50
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 11
+          },
+          {
+            "next": 3,
+            "row": 75
+          },
+          {
+            "next": 2,
+            "row": 34
+          },
+          {
+            "next": 2,
+            "row": 98
+          }
+        ]
+      ]
+    }
+  },
+  "contexts": [
+    {
+      "name": "idle",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "alternating",
+      "inputs": [
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "name": "mixed",
+      "inputs": [
+        1,
+        1,
+        3,
+        2,
+        0,
+        2,
+        3,
+        1,
+        1,
+        3,
+        2,
+        0,
+        2,
+        3,
+        1,
+        1,
+        3,
+        2,
+        0,
+        2
+      ]
+    }
+  ]
+}

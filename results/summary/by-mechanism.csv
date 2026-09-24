@@ -1,0 +1,7 @@
+mechanism,cases,feasible,infeasible,zero_loss_infeasible,min_cost,max_cost,max_pair_count,max_candidate_checks,max_pair_core,no_loss_false_coverage,marked_false_coverage,marginal_missed_feasible,total_case_cpu_seconds
+arbiter,72,14,58,54,1,4,114,12,3,12,5,6,0.13918237099999953
+counter,72,34,38,36,1,4,54,10,3,18,11,14,0.128225315
+credit,72,10,62,60,1,3,168,7,3,6,4,4,0.3609409279999991
+fifo,72,6,66,66,1,2,54,8,2,2,2,2,0.4260219200000013
+handshake,72,21,51,39,1,3,54,8,3,17,2,2,0.10036291200000136
+lfsr,72,0,72,72,NA,NA,216,0,0,0,0,0,0.8854484429999991

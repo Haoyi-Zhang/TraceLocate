@@ -1,0 +1,1 @@
+{"model":"counter","spec":{"h":4,"d":2,"offsets":[0,1],"contexts":[0,1,2]},"full_margin":{"loss":0,"mask":63,"pair":[0,0,0,1,0],"alignment":[[0,0],[1,1],[2,2],[3,3]],"below":[]},"status":"infeasible","mask":null,"cost":null,"obstructions":[],"coverage":[]}

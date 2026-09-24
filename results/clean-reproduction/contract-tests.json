@@ -1,0 +1,1176 @@
+{
+  "seed": 99173,
+  "bitparallel_lcs_grid_checks": 1280,
+  "weighted_oracle_cases": [
+    {
+      "case": 0,
+      "h": 1,
+      "m": 5,
+      "d": 0,
+      "cost": 8,
+      "minimum_loss": 1
+    },
+    {
+      "case": 1,
+      "h": 4,
+      "m": 2,
+      "d": 0,
+      "cost": 5,
+      "minimum_loss": 2
+    },
+    {
+      "case": 2,
+      "h": 1,
+      "m": 5,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 3,
+      "h": 2,
+      "m": 3,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 4,
+      "h": 5,
+      "m": 4,
+      "d": 4,
+      "cost": null,
+      "minimum_loss": 4
+    },
+    {
+      "case": 5,
+      "h": 2,
+      "m": 3,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 2
+    },
+    {
+      "case": 6,
+      "h": 3,
+      "m": 3,
+      "d": 0,
+      "cost": 3,
+      "minimum_loss": 2
+    },
+    {
+      "case": 7,
+      "h": 2,
+      "m": 5,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 8,
+      "h": 1,
+      "m": 5,
+      "d": 0,
+      "cost": 3,
+      "minimum_loss": 1
+    },
+    {
+      "case": 9,
+      "h": 4,
+      "m": 3,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 2
+    },
+    {
+      "case": 10,
+      "h": 2,
+      "m": 3,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 1
+    },
+    {
+      "case": 11,
+      "h": 4,
+      "m": 4,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 2
+    },
+    {
+      "case": 12,
+      "h": 2,
+      "m": 2,
+      "d": 0,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 13,
+      "h": 5,
+      "m": 1,
+      "d": 1,
+      "cost": 2,
+      "minimum_loss": 2
+    },
+    {
+      "case": 14,
+      "h": 1,
+      "m": 2,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 1
+    },
+    {
+      "case": 15,
+      "h": 1,
+      "m": 1,
+      "d": 0,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 16,
+      "h": 2,
+      "m": 3,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 1
+    },
+    {
+      "case": 17,
+      "h": 5,
+      "m": 2,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 18,
+      "h": 5,
+      "m": 5,
+      "d": 5,
+      "cost": null,
+      "minimum_loss": 4
+    },
+    {
+      "case": 19,
+      "h": 1,
+      "m": 3,
+      "d": 0,
+      "cost": 4,
+      "minimum_loss": 1
+    },
+    {
+      "case": 20,
+      "h": 1,
+      "m": 5,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 21,
+      "h": 2,
+      "m": 3,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 22,
+      "h": 4,
+      "m": 3,
+      "d": 4,
+      "cost": null,
+      "minimum_loss": 2
+    },
+    {
+      "case": 23,
+      "h": 4,
+      "m": 4,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 3
+    },
+    {
+      "case": 24,
+      "h": 4,
+      "m": 5,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 3
+    },
+    {
+      "case": 25,
+      "h": 4,
+      "m": 5,
+      "d": 2,
+      "cost": 8,
+      "minimum_loss": 4
+    },
+    {
+      "case": 26,
+      "h": 4,
+      "m": 1,
+      "d": 2,
+      "cost": 4,
+      "minimum_loss": 3
+    },
+    {
+      "case": 27,
+      "h": 4,
+      "m": 1,
+      "d": 0,
+      "cost": 1,
+      "minimum_loss": 1
+    },
+    {
+      "case": 28,
+      "h": 4,
+      "m": 3,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 3
+    },
+    {
+      "case": 29,
+      "h": 3,
+      "m": 5,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 2
+    },
+    {
+      "case": 30,
+      "h": 4,
+      "m": 5,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 2
+    },
+    {
+      "case": 31,
+      "h": 1,
+      "m": 2,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 32,
+      "h": 4,
+      "m": 4,
+      "d": 1,
+      "cost": 8,
+      "minimum_loss": 3
+    },
+    {
+      "case": 33,
+      "h": 4,
+      "m": 5,
+      "d": 4,
+      "cost": null,
+      "minimum_loss": 3
+    },
+    {
+      "case": 34,
+      "h": 1,
+      "m": 4,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 35,
+      "h": 2,
+      "m": 4,
+      "d": 0,
+      "cost": 3,
+      "minimum_loss": 2
+    },
+    {
+      "case": 36,
+      "h": 1,
+      "m": 1,
+      "d": 0,
+      "cost": 1,
+      "minimum_loss": 1
+    },
+    {
+      "case": 37,
+      "h": 3,
+      "m": 2,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 38,
+      "h": 1,
+      "m": 2,
+      "d": 0,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 39,
+      "h": 5,
+      "m": 3,
+      "d": 2,
+      "cost": 7,
+      "minimum_loss": 4
+    },
+    {
+      "case": 40,
+      "h": 3,
+      "m": 4,
+      "d": 0,
+      "cost": 1,
+      "minimum_loss": 3
+    },
+    {
+      "case": 41,
+      "h": 3,
+      "m": 1,
+      "d": 0,
+      "cost": 4,
+      "minimum_loss": 2
+    },
+    {
+      "case": 42,
+      "h": 4,
+      "m": 1,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 43,
+      "h": 2,
+      "m": 1,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 44,
+      "h": 1,
+      "m": 1,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 45,
+      "h": 3,
+      "m": 1,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 46,
+      "h": 3,
+      "m": 2,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 47,
+      "h": 5,
+      "m": 5,
+      "d": 4,
+      "cost": null,
+      "minimum_loss": 4
+    },
+    {
+      "case": 48,
+      "h": 4,
+      "m": 1,
+      "d": 0,
+      "cost": 4,
+      "minimum_loss": 1
+    },
+    {
+      "case": 49,
+      "h": 5,
+      "m": 3,
+      "d": 4,
+      "cost": null,
+      "minimum_loss": 3
+    },
+    {
+      "case": 50,
+      "h": 2,
+      "m": 2,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 51,
+      "h": 4,
+      "m": 4,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 52,
+      "h": 3,
+      "m": 5,
+      "d": 2,
+      "cost": 14,
+      "minimum_loss": 3
+    },
+    {
+      "case": 53,
+      "h": 3,
+      "m": 2,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 2
+    },
+    {
+      "case": 54,
+      "h": 1,
+      "m": 5,
+      "d": 0,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 55,
+      "h": 5,
+      "m": 5,
+      "d": 2,
+      "cost": 8,
+      "minimum_loss": 3
+    },
+    {
+      "case": 56,
+      "h": 2,
+      "m": 4,
+      "d": 0,
+      "cost": 4,
+      "minimum_loss": 2
+    },
+    {
+      "case": 57,
+      "h": 1,
+      "m": 3,
+      "d": 0,
+      "cost": 13,
+      "minimum_loss": 1
+    },
+    {
+      "case": 58,
+      "h": 3,
+      "m": 2,
+      "d": 1,
+      "cost": 8,
+      "minimum_loss": 2
+    },
+    {
+      "case": 59,
+      "h": 1,
+      "m": 2,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 60,
+      "h": 1,
+      "m": 1,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 61,
+      "h": 5,
+      "m": 2,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 2
+    },
+    {
+      "case": 62,
+      "h": 2,
+      "m": 3,
+      "d": 0,
+      "cost": 6,
+      "minimum_loss": 2
+    },
+    {
+      "case": 63,
+      "h": 2,
+      "m": 4,
+      "d": 1,
+      "cost": 10,
+      "minimum_loss": 2
+    },
+    {
+      "case": 64,
+      "h": 5,
+      "m": 5,
+      "d": 5,
+      "cost": null,
+      "minimum_loss": 4
+    },
+    {
+      "case": 65,
+      "h": 3,
+      "m": 2,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 66,
+      "h": 2,
+      "m": 1,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 67,
+      "h": 3,
+      "m": 2,
+      "d": 0,
+      "cost": 1,
+      "minimum_loss": 1
+    },
+    {
+      "case": 68,
+      "h": 2,
+      "m": 5,
+      "d": 1,
+      "cost": 8,
+      "minimum_loss": 2
+    },
+    {
+      "case": 69,
+      "h": 3,
+      "m": 4,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 70,
+      "h": 3,
+      "m": 1,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 71,
+      "h": 1,
+      "m": 1,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 72,
+      "h": 2,
+      "m": 3,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 73,
+      "h": 1,
+      "m": 2,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 74,
+      "h": 5,
+      "m": 2,
+      "d": 0,
+      "cost": 1,
+      "minimum_loss": 3
+    },
+    {
+      "case": 75,
+      "h": 1,
+      "m": 5,
+      "d": 0,
+      "cost": 1,
+      "minimum_loss": 1
+    },
+    {
+      "case": 76,
+      "h": 3,
+      "m": 2,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 3
+    },
+    {
+      "case": 77,
+      "h": 1,
+      "m": 2,
+      "d": 0,
+      "cost": 4,
+      "minimum_loss": 1
+    },
+    {
+      "case": 78,
+      "h": 3,
+      "m": 2,
+      "d": 0,
+      "cost": 1,
+      "minimum_loss": 1
+    },
+    {
+      "case": 79,
+      "h": 3,
+      "m": 1,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 80,
+      "h": 2,
+      "m": 4,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 2
+    },
+    {
+      "case": 81,
+      "h": 5,
+      "m": 2,
+      "d": 5,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 82,
+      "h": 2,
+      "m": 3,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 83,
+      "h": 5,
+      "m": 5,
+      "d": 3,
+      "cost": 12,
+      "minimum_loss": 4
+    },
+    {
+      "case": 84,
+      "h": 4,
+      "m": 4,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 3
+    },
+    {
+      "case": 85,
+      "h": 1,
+      "m": 2,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 86,
+      "h": 1,
+      "m": 1,
+      "d": 0,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 87,
+      "h": 5,
+      "m": 5,
+      "d": 1,
+      "cost": 6,
+      "minimum_loss": 4
+    },
+    {
+      "case": 88,
+      "h": 2,
+      "m": 1,
+      "d": 0,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 89,
+      "h": 4,
+      "m": 5,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 2
+    },
+    {
+      "case": 90,
+      "h": 2,
+      "m": 3,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 91,
+      "h": 3,
+      "m": 2,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 92,
+      "h": 1,
+      "m": 1,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 93,
+      "h": 1,
+      "m": 2,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 94,
+      "h": 5,
+      "m": 4,
+      "d": 2,
+      "cost": 8,
+      "minimum_loss": 5
+    },
+    {
+      "case": 95,
+      "h": 4,
+      "m": 3,
+      "d": 0,
+      "cost": 1,
+      "minimum_loss": 1
+    },
+    {
+      "case": 96,
+      "h": 2,
+      "m": 5,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 97,
+      "h": 2,
+      "m": 4,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 98,
+      "h": 1,
+      "m": 4,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 99,
+      "h": 2,
+      "m": 5,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 100,
+      "h": 4,
+      "m": 3,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 3
+    },
+    {
+      "case": 101,
+      "h": 3,
+      "m": 5,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 2
+    },
+    {
+      "case": 102,
+      "h": 1,
+      "m": 3,
+      "d": 0,
+      "cost": 4,
+      "minimum_loss": 1
+    },
+    {
+      "case": 103,
+      "h": 4,
+      "m": 1,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 104,
+      "h": 4,
+      "m": 4,
+      "d": 4,
+      "cost": null,
+      "minimum_loss": 3
+    },
+    {
+      "case": 105,
+      "h": 4,
+      "m": 2,
+      "d": 0,
+      "cost": 2,
+      "minimum_loss": 2
+    },
+    {
+      "case": 106,
+      "h": 2,
+      "m": 1,
+      "d": 2,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 107,
+      "h": 5,
+      "m": 1,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 108,
+      "h": 4,
+      "m": 3,
+      "d": 1,
+      "cost": 3,
+      "minimum_loss": 3
+    },
+    {
+      "case": 109,
+      "h": 1,
+      "m": 3,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 110,
+      "h": 2,
+      "m": 5,
+      "d": 1,
+      "cost": 10,
+      "minimum_loss": 2
+    },
+    {
+      "case": 111,
+      "h": 1,
+      "m": 5,
+      "d": 0,
+      "cost": 4,
+      "minimum_loss": 1
+    },
+    {
+      "case": 112,
+      "h": 2,
+      "m": 2,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 1
+    },
+    {
+      "case": 113,
+      "h": 2,
+      "m": 1,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 114,
+      "h": 1,
+      "m": 3,
+      "d": 1,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 115,
+      "h": 3,
+      "m": 1,
+      "d": 0,
+      "cost": null,
+      "minimum_loss": 0
+    },
+    {
+      "case": 116,
+      "h": 1,
+      "m": 2,
+      "d": 0,
+      "cost": 7,
+      "minimum_loss": 1
+    },
+    {
+      "case": 117,
+      "h": 3,
+      "m": 5,
+      "d": 3,
+      "cost": null,
+      "minimum_loss": 3
+    },
+    {
+      "case": 118,
+      "h": 4,
+      "m": 2,
+      "d": 1,
+      "cost": 4,
+      "minimum_loss": 2
+    },
+    {
+      "case": 119,
+      "h": 4,
+      "m": 3,
+      "d": 1,
+      "cost": 7,
+      "minimum_loss": 2
+    }
+  ],
+  "permutation_checks": 120,
+  "lower_bound_cases": [
+    {
+      "d": 0,
+      "h": 1,
+      "essential_taps": 1,
+      "frontier_records": 1
+    },
+    {
+      "d": 1,
+      "h": 2,
+      "essential_taps": 3,
+      "frontier_records": 4
+    },
+    {
+      "d": 2,
+      "h": 3,
+      "essential_taps": 5,
+      "frontier_records": 9
+    },
+    {
+      "d": 3,
+      "h": 4,
+      "essential_taps": 7,
+      "frontier_records": 16
+    },
+    {
+      "d": 4,
+      "h": 5,
+      "essential_taps": 9,
+      "frontier_records": 25
+    },
+    {
+      "d": 5,
+      "h": 6,
+      "essential_taps": 11,
+      "frontier_records": 36
+    },
+    {
+      "d": 6,
+      "h": 7,
+      "essential_taps": 13,
+      "frontier_records": 49
+    }
+  ],
+  "invalid_mutations": [
+    {
+      "mutation": "omit required cross-class coverage",
+      "rejected": true,
+      "reason": "coverage pair count"
+    },
+    {
+      "mutation": "duplicate coverage pair",
+      "rejected": true,
+      "reason": "coverage pair count"
+    },
+    {
+      "mutation": "wrong coverage pair identifier",
+      "rejected": true,
+      "reason": "coverage pair order or identity"
+    },
+    {
+      "mutation": "cost below actual selected cost",
+      "rejected": true,
+      "reason": "claimed cost"
+    },
+    {
+      "mutation": "mask outside declared tap universe",
+      "rejected": true,
+      "reason": "mask range"
+    },
+    {
+      "mutation": "nonintegral upper bound",
+      "rejected": true,
+      "reason": "frontier range"
+    },
+    {
+      "mutation": "negative boundary",
+      "rejected": true,
+      "reason": "frontier range"
+    },
+    {
+      "mutation": "omitted deletion-state row",
+      "rejected": true,
+      "reason": "frontier row count"
+    },
+    {
+      "mutation": "unselected mismatch coordinate",
+      "rejected": true,
+      "reason": "witness tap not selected"
+    },
+    {
+      "mutation": "false mismatch at equal coordinate",
+      "rejected": true,
+      "reason": "boundary is not a witnessed mismatch"
+    },
+    {
+      "mutation": "terminal fails strict inequality",
+      "rejected": true,
+      "reason": "terminal upper bound does not prove separation"
+    },
+    {
+      "mutation": "short obstruction alignment",
+      "rejected": true,
+      "reason": "alignment length"
+    },
+    {
+      "mutation": "forged disagreement clause",
+      "rejected": true,
+      "reason": "unsound obstruction clause"
+    },
+    {
+      "mutation": "remove optimality lower bound",
+      "rejected": true,
+      "reason": "a cheaper mask survives the lower-bound certificate"
+    },
+    {
+      "mutation": "mismatched independent task",
+      "rejected": true,
+      "reason": "task mismatch"
+    },
+    {
+      "mutation": "infeasible despite full-interface margin",
+      "rejected": true,
+      "reason": "full-tap collision outside requested budget"
+    },
+    {
+      "mutation": "missing margin below-budget coverage",
+      "rejected": true,
+      "reason": "coverage pair count"
+    },
+    {
+      "mutation": "minimum-loss count below certified margin",
+      "rejected": true,
+      "reason": "alignment length"
+    },
+    {
+      "mutation": "trusted model adds aliased class without new coverage",
+      "rejected": true,
+      "reason": "coverage pair count"
+    },
+    {
+      "mutation": "predecessor deletion upper bound violated",
+      "rejected": true,
+      "reason": "left-deletion upper bound"
+    }
+  ],
+  "negative_controls": {
+    "deletion": {
+      "mask": 7,
+      "cost": 3,
+      "actual_coverage": true
+    },
+    "none": {
+      "mask": 1,
+      "cost": 1,
+      "actual_coverage": false
+    },
+    "marked": {
+      "mask": 5,
+      "cost": 2,
+      "actual_coverage": false
+    },
+    "marginal": {
+      "mask": null,
+      "cost": null,
+      "actual_coverage": false
+    }
+  },
+  "null_cases": [
+    {
+      "h": 1,
+      "d": 1,
+      "status": "infeasible",
+      "minimum_loss": 1
+    },
+    {
+      "h": 2,
+      "d": 0,
+      "status": "infeasible",
+      "minimum_loss": 0
+    }
+  ],
+  "horizon_independence_cases": [
+    {
+      "h": 8,
+      "records": 4,
+      "kernel_taps": 3
+    },
+    {
+      "h": 32,
+      "records": 4,
+      "kernel_taps": 3
+    },
+    {
+      "h": 128,
+      "records": 4,
+      "kernel_taps": 3
+    },
+    {
+      "h": 512,
+      "records": 4,
+      "kernel_taps": 3
+    }
+  ],
+  "result": "all assertions passed",
+  "cpu_seconds": 0.13449842999999995,
+  "wall_seconds": 0.13449835799974608,
+  "process_peak_rss_kib": 94256,
+  "workers": 1
+}

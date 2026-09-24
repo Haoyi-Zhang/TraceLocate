@@ -1,0 +1,324 @@
+{
+  "name": "counter",
+  "origin": "original synthetic finite-state mechanism fixture",
+  "row_convention": "output on a transition, after the stated successor computation",
+  "taps": [
+    {
+      "name": "q0",
+      "cost": 1
+    },
+    {
+      "name": "q1",
+      "cost": 1
+    },
+    {
+      "name": "carry",
+      "cost": 1
+    },
+    {
+      "name": "change0",
+      "cost": 1
+    },
+    {
+      "name": "change1",
+      "cost": 1
+    },
+    {
+      "name": "enable",
+      "cost": 1
+    }
+  ],
+  "classes": [
+    {
+      "name": "nominal",
+      "variants": [
+        "nominal"
+      ]
+    },
+    {
+      "name": "hold",
+      "variants": [
+        "hold"
+      ]
+    },
+    {
+      "name": "stride",
+      "variants": [
+        "stride"
+      ]
+    },
+    {
+      "name": "reverse",
+      "variants": [
+        "reverse"
+      ]
+    }
+  ],
+  "variants": {
+    "nominal": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 1,
+            "row": 41
+          }
+        ],
+        [
+          {
+            "next": 1,
+            "row": 1
+          },
+          {
+            "next": 2,
+            "row": 58
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 2
+          },
+          {
+            "next": 3,
+            "row": 43
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 3
+          },
+          {
+            "next": 0,
+            "row": 60
+          }
+        ]
+      ]
+    },
+    "hold": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 0,
+            "row": 32
+          }
+        ],
+        [
+          {
+            "next": 1,
+            "row": 1
+          },
+          {
+            "next": 1,
+            "row": 33
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 2
+          },
+          {
+            "next": 2,
+            "row": 34
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 3
+          },
+          {
+            "next": 3,
+            "row": 35
+          }
+        ]
+      ]
+    },
+    "stride": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 2,
+            "row": 50
+          }
+        ],
+        [
+          {
+            "next": 1,
+            "row": 1
+          },
+          {
+            "next": 3,
+            "row": 51
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 2
+          },
+          {
+            "next": 0,
+            "row": 52
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 3
+          },
+          {
+            "next": 1,
+            "row": 53
+          }
+        ]
+      ]
+    },
+    "reverse": {
+      "initial": [
+        0
+      ],
+      "table": [
+        [
+          {
+            "next": 0,
+            "row": 0
+          },
+          {
+            "next": 3,
+            "row": 59
+          }
+        ],
+        [
+          {
+            "next": 1,
+            "row": 1
+          },
+          {
+            "next": 0,
+            "row": 40
+          }
+        ],
+        [
+          {
+            "next": 2,
+            "row": 2
+          },
+          {
+            "next": 1,
+            "row": 57
+          }
+        ],
+        [
+          {
+            "next": 3,
+            "row": 3
+          },
+          {
+            "next": 2,
+            "row": 42
+          }
+        ]
+      ]
+    }
+  },
+  "contexts": [
+    {
+      "name": "idle",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "alternating",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "mixed",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}

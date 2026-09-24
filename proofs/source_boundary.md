@@ -1,0 +1,15 @@
+# Mathematical, source, and physical boundary
+
+The mathematical result is a finite observation-language theorem. Classical deletion/LCS equivalence, edit-distance dynamic programming, furthest-reaching frontier dominance, set-cover foundations, and producer/consumer certification are prior mechanisms. The retained proposed deduction is a tap-labelled local blocking certificate, the fact that its labels preserve separation after projection, exact bounded selection from alignment clauses, and a fixed-horizon minimum-loss witness. No new general LCS algorithm, diagnosability framework, set-cover approximation, or proof-carrying architecture is claimed.
+
+Projection monotonicity establishes that adding taps cannot create a projected common subsequence. It justifies a full-interface infeasibility precheck and the union of per-pair tap cores. It does not produce a small global interface independent of the number of pairs. The upper bound `(d+1)^2` and lower family `2d+1` do not match.
+
+The consumer is a second implementation of the checking rules, not a second research team or proof-assistant mechanization. Pair completeness is relative to the supplied total transition tables. If a finite declaration omits a behavior, the consumer cannot recover it.
+
+One public-RTL simulation bridge is now retained. It binds exact `ben-marshall/uart` source bytes and license, derives declaration-order-only compatibility copies, executes a deterministic TX--RX loopback, retains 33 raw traces, and verifies every one of the 1,584 trace-to-table cells and all 28 campaign cases. An isolated recompilation reproduced the traces, imported model, and campaign. This closes the previous source-to-row gap for that one declared simulation experiment.
+
+The bridge is not a general RTL-to-language theorem. It does not prove equivalence after synthesis, timing closure, place and route, recorder insertion, finite physical buffering beyond the declared windows, asynchronous sampling, electrical fault realism, or behavior on fabricated silicon. The forced one-cycle simulation classes are controlled interventions, not calibrated defect distributions. Two- or three-tap row payloads quantify retained scalar bits only; they do not measure probe routing, area, power, or timing.
+
+The manuscript cites 62 scholarly works across post-silicon infrastructure, trace-signal selection, processor/protocol localization, diagnosability, sequence comparison, optimization, and certifying computation. `literature.csv` has one row per citation and marks 12 direct IEEE TCAD comparators. It distinguishes full-PDF inspection, partial substantive reading, abstract review, and metadata verification. Bibliography size is not treated as full-text calibration or proof of novelty.
+
+DAC 2008 IFRA remains distinct from the three-author 2009 TCAD article. The 2010 overview is background rather than an original theorem source. Recent 2024 signal-selection/checker work and the 2026 hybrid-barrier diagnosability work are included without claiming that they validate the present finite contract. No award, corresponding-authorship role, or inaccessible passage is inferred.

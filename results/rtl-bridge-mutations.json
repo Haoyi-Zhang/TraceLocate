@@ -18,7 +18,7 @@
     },
     {
       "mutation": "fault declaration",
-      "reason": "REJECT: fault declaration payload-5/line_early",
+      "reason": "REJECT: fixed fault schedule/value payload-5/line_early",
       "rejected": true
     },
     {
@@ -30,9 +30,19 @@
       "mutation": "frozen campaign membership",
       "reason": "REJECT: campaign identifiers",
       "rejected": true
+    },
+    {
+      "mutation": "equal-cost tx_busy/rxd tap-name swap",
+      "reason": "REJECT: ordered tap name/kind/cost binding",
+      "rejected": true
+    },
+    {
+      "mutation": "payload-5 tx_data_early cycle 10-to-11",
+      "reason": "REJECT: fixed fault schedule/value payload-5/tx_data_early",
+      "rejected": true
     }
   ],
-  "mutations_rejected": 6,
+  "mutations_rejected": 8,
   "status": "passed",
   "valid_fixture_accepted": true
 }

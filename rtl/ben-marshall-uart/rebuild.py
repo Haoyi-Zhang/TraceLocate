@@ -155,6 +155,15 @@ def main() -> None:
             "timestamps_in_model": False,
             "bit_order": "tap 0 is the least-significant bit of row",
             "testbench": "rtl/ben-marshall-uart/trace_tb.sv",
+            "testbench_timescale": "1ns/1ps",
+            "testbench_half_period_ns": 5,
+            "simulated_clock_hz": 100_000_000,
+            "design_parameter_clk_hz": 4_000_000,
+            "design_parameter_bit_rate": 1_000_000,
+            "interpretation": (
+                "cycle-normalized parameter configuration; absolute testbench time is "
+                "not a 4 MHz clock or a 1 MHz physical line-rate measurement"
+            ),
         },
         "contexts": CONTEXTS,
         "variant_order": variant_order,

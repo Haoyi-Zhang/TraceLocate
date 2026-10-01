@@ -1,9 +1,0 @@
-{
-  "pair_budget_checks": 141106,
-  "strict_two_tap_core_reductions": 45874,
-  "cpu_seconds": 1.336596005,
-  "peak_rss_kib": 94256,
-  "workers": 1,
-  "result": "all assertions passed",
-  "scope": "exhaustive two-bit words lengths 1..4, unordered pairs including equal, d=0..n-1; 3000 seeded larger word pairs"
-}

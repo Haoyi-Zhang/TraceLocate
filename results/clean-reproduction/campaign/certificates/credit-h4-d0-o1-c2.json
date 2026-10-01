@@ -1,1 +1,0 @@
-{"model":"credit","spec":{"h":4,"d":0,"offsets":[0],"contexts":[2]},"full_margin":{"loss":0,"mask":127,"pair":[0,0,1,2,0],"alignment":[[0,0],[1,1],[2,2],[3,3]],"below":[]},"status":"infeasible","mask":null,"cost":null,"obstructions":[],"coverage":[]}

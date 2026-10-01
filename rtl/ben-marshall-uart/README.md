@@ -1,94 +1,73 @@
-# Pinned public-RTL UART bridge
+# Pinned UART simulation bridge
 
-This directory is the auditable bridge from executable public RTL to the finite synchronized-row language used by the certificate engine. It closes a source-to-table validation gap for one simulation setting; it does **not** validate a silicon acquisition path or claim that the injected transients are a complete physical defect model.
+This directory is the only public-RTL bridge included in the supported evidence. It converts one pinned MIT-licensed UART TX/RX implementation into a deterministic finite row language and one canonical 28-case campaign. It is a simulation-to-language validation, not a physical UART, synthesis, routed-probe, electrical-fault, FPGA, or silicon experiment.
 
-## Pinned source and licensing
+## Retained source
 
-The unmodified upstream files come from `ben-marshall/uart` at commit
-`5fd2db850a41b65aa34f3a31c663fc8704c7abd8`:
+The unmodified upstream files are retained under `upstream/` at commit `5fd2db850a41b65aa34f3a31c663fc8704c7abd8`. `upstream/SOURCE.json` records byte sizes, Git blob identifiers, and source locations. The MIT license is retained verbatim. Icarus Verilog 13 needs parameters to be declared before their use in ANSI port widths, so `prepare_upstream.py` makes declaration-order-only compatibility copies under `generated/`; the checker independently reconstructs and compares that rewrite.
 
-| File | Bytes | Git blob |
-|---|---:|---|
-| `upstream/uart_tx.v` | 5,268 | `89906d6c5059a592dd086bbf60997368375cd1bb` |
-| `upstream/uart_rx.v` | 5,718 | `1cb2eadcb544f57864b29d380e893f92fac5f38c` |
-| `upstream/LICENSE` | 1,069 | `22b2e46c610d85f568e402c0c556821676d55253` |
+## Capture and timebase
 
-`upstream/SOURCE.json` records the source URL, commit, file sizes, and blobs. The files are distributed under their retained MIT license; see `THIRD_PARTY_NOTICES.md` at the repository root.
+`trace_tb.sv` uses ``timescale 1ns/1ps`` and toggles `clk` every 5 ns. The absolute simulation clock is therefore 100 MHz. The instance parameters `CLK_HZ=4_000_000` and `BIT_RATE=1_000_000` determine internal cycle ratios, but the retained experiment is interpreted only in sampled-cycle coordinates. It does **not** claim an implemented 4 MHz clock, an achieved 1 MHz physical line rate, or line-rate fidelity.
 
-Icarus Verilog 13 requires a parameter to be declared before it appears in an ANSI port width. `prepare_upstream.py` verifies every pinned blob, then creates `generated/uart_tx.v` and `generated/uart_rx.v` by moving the four existing parameter declarations into each module parameter list. It makes no expression, statement, assignment, state-machine, or port change. `generated/manifest.json` records the resulting digests, and the independent checker reconstructs the expected rewrite from the unmodified source.
+Three known payload contexts (`0x5`, `0xA`, `0x3`) and 11 variants yield 33 traces. Each trace contains 48 rising-edge rows sampled after nonblocking-assignment settling. The imported deletion unit is one complete synchronized 12-bit row; no timestamp is included in the finite language.
 
-## Capture experiment
+The checker binds every ordered bit position to all of the following, simultaneously:
 
-`trace_tb.sv` instantiates the transmitter and receiver in loopback with:
+| Bit | CSV column | RTL expression | Model tap | Kind | Cost |
+|---:|---|---|---|---|---:|
+| 0 | `txd` | `uart_txd` | `txd` | port | 1 |
+| 1 | `tx_busy` | `uart_tx_busy` | `tx_busy` | port | 1 |
+| 2 | `tx_fsm0` | `tx.fsm_state[0]` | `tx_fsm[0]` | internal | 2 |
+| 3 | `tx_fsm1` | `tx.fsm_state[1]` | `tx_fsm[1]` | internal | 2 |
+| 4 | `tx_bit0` | `tx.bit_counter[0]` | `tx_bit_count[0]` | internal | 2 |
+| 5 | `tx_bit1` | `tx.bit_counter[1]` | `tx_bit_count[1]` | internal | 2 |
+| 6 | `tx_data0` | `tx.data_to_send[0]` | `tx_payload_shift[0]` | internal | 3 |
+| 7 | `rxd` | `uart_rxd` | `rxd` | interconnect | 1 |
+| 8 | `rx_valid` | `uart_rx_valid` | `rx_valid` | port | 1 |
+| 9 | `rx_fsm0` | `rx.fsm_state[0]` | `rx_fsm[0]` | internal | 2 |
+| 10 | `rx_fsm1` | `rx.fsm_state[1]` | `rx_fsm[1]` | internal | 2 |
+| 11 | `rx_sample` | `rx.bit_sample` | `rx_sample` | internal | 2 |
 
-- four payload bits, 1 MHz line rate, and 4 MHz clock;
-- three known payload contexts: `0x5`, `0xA`, and `0x3`;
-- 48 captured rising-edge rows per run, sampled after a one-time-unit nonblocking-assignment settle;
-- one fixed 12-coordinate tuple per row; tap 0 is the packed row's least-significant bit;
-- no timestamp in the imported language; the deletion unit is one entire synchronized row.
+## Fixed interventions
 
-The candidate interface is:
+Every nonnominal execution forces one declared RTL quantity for one sampled rising edge. The derived nominal-inversion interventions are fixed at:
 
-| Index | Tap | Cost | Boundary |
-|---:|---|---:|---|
-| 0 | `txd` | 1 | transmitter output |
-| 1 | `tx_busy` | 1 | transmitter output |
-| 2-3 | `tx_fsm[0:1]` | 2 each | transmitter internal state |
-| 4-5 | `tx_bit_count[0:1]` | 2 each | transmitter internal count |
-| 6 | `tx_payload_shift[0]` | 3 | transmitter internal data |
-| 7 | `rxd` | 1 | serial interconnect |
-| 8 | `rx_valid` | 1 | receiver output |
-| 9-10 | `rx_fsm[0:1]` | 2 each | receiver internal state |
-| 11 | `rx_sample` | 2 | receiver internal sample |
+- `tx_data_early`: cycle 10;
+- `tx_data_late`: cycle 17;
+- `rx_sample_early`: cycle 12;
+- `rx_sample_late`: cycle 17.
 
-The six declared classes contain 11 variants: nominal, two serial-line transients, two transmitter-control transients, two transmitter-payload transients, two receiver-control transients, and two receiver-sample transients. Every nonnominal run forces exactly one declared signal value for exactly one sampled rising edge. The payload/sample fault values are chosen as the opposite of the nominal value at the same cycle. These are controlled simulation interventions, not calibrated electrical faults.
+For each context, the checker re-derives the forced value as the complement of the nominal column at that exact cycle and compares it with both trace metadata and `resolved_faults`. These are controlled digital simulation interventions, not calibrated physical defects.
 
-`rebuild.py` compiles the pinned RTL, runs all 33 context/variant simulations, rejects X/Z rows or missing/duplicate fault firings, writes the raw CSV traces, and calls `import_traces.py`. The retained source-level regeneration produced all 33 traces and 1,584 rows identically on a second isolated run with Icarus Verilog 13.0.
+## Translation and campaign
 
-## Deterministic trace-to-language translation
+`rebuild.py` compiles the pinned source, produces 33 raw CSV traces, rejects X/Z rows and missing or repeated intervention firings, and calls `import_traces.py`. The importer verifies headers, cycles, bits, packed rows, lengths, and trace digests before creating `models/uart-loopback-rtl.json`. Every one of the 1,584 transition-table cells is copied from a retained row.
 
-`import_traces.py` verifies each CSV header, cycle sequence, binary coordinate, packed row, length, and SHA-256 digest. It then creates `models/uart-loopback-rtl.json` as a 48-state deterministic chain for every variant: state `q` emits the retained row for context `c` and advances to `min(q+1,47)`. Thus every one of the 1,584 table cells is a direct copy of one retained trace row.
+The only authoritative campaign is `models/rtl-campaign.json`: 24 core tasks from horizons `{16,24,32}`, budgets `{0,1}`, and four context scopes at offset `{0}`, plus four `h=24,d=0` controls with offsets `{0,1}`. It contains exactly 28 cases. The retained outcomes are 12 feasible, 16 infeasible, and 8 zero-loss full-interface aliases.
 
-`src/check_rtl_bridge.py` independently verifies:
+`src/check_rtl_bridge.py` independently checks source identity, compatibility copies, testbench bit/column/signal ordering, tap name/kind/cost ordering, timing declarations, fixed intervention cycles and values, all trace rows and hashes, all imported cells, and the exact campaign Cartesian product.
 
-1. all three upstream Git blobs;
-2. both declaration-only compatibility copies;
-3. source commit, contexts, variant membership, and fault declarations;
-4. all 33 trace hashes, binary rows, and packed values;
-5. all 1,584 trace-to-table cells; and
-6. the exact 28-case campaign and horizon bounds.
-
-`tests/test_rtl_bridge.py` accepts the valid fixture and rejects six targeted corruptions: upstream source, compatibility copy, raw trace, fault metadata, imported table cell, and campaign membership.
-
-## Frozen public-RTL campaign
-
-The 24 core cases cross horizons `{16,24,32}`, row-loss budgets `{0,1}`, and context scopes `{payload-5}`, `{payload-A}`, `{payload-3}`, and all three known contexts, with offset set `{0}`. Four controls repeat `h=24,d=0` with offsets `{0,1}`. The matrix was frozen after a bounded timing pilot; it contains every cell in that declaration, not a post-hoc selection of favorable outcomes.
-
-The exact outcome is 12 feasible and 16 infeasible cases. All `h=16` tasks already contain a full-row cross-class alias. At `h=24` and `h=32`, all `d=0` tasks are feasible with optimum weighted costs 3-5, while every `d=1` task is impossible because the full 12-tap interface has minimum ambiguity loss one. The `{0,1}` offset controls at `h=24,d=0` preserve the same optima. The selected taps are either `{rxd, rx_sample}` or that pair plus `tx_fsm[0]`/`tx_busy`, depending on payload and horizon. These are exact results for this declaration, not recommendations for UART instrumentation.
+`tests/test_rtl_bridge.py` rejects eight directed corruptions. Two reviewer-sensitive regressions are: (1) exchanging only the equal-cost `tx_busy` and `rxd` model names is rejected, and (2) changing only `payload-5/tx_data_early` from cycle 10 to 11 while retaining all trace bytes and hashes is rejected. `tests/test_uart_regressions.py` additionally proves for the frozen `payload-5,h=24,d=0` task that mask 2176 selects `{rxd, rx_sample}`, whereas mask 2050 selects `{tx_busy, rx_sample}` and leaves full-length cross-class aliases.
 
 ## Commands
 
-Validate retained sources, traces, translation, and campaign:
+From the standalone artifact root, validate retained bridge evidence:
 
 ```sh
-python src/check_rtl_bridge.py
-python tests/test_rtl_bridge.py
-python src/run_campaign.py --instance models/rtl-campaign.json \
-  --out results/new-rtl-campaign --seconds 120
-python src/summarize.py --instance models/rtl-campaign.json \
-  --results results/new-rtl-campaign --out results/new-rtl-summary
+python src/check_rtl_bridge.py --root . --out results/rtl-bridge-check.json
+python tests/test_rtl_bridge.py results/rtl-bridge-mutations.json
+python tests/test_uart_regressions.py --out results/uart-regressions.json
 ```
 
-Regenerate from RTL when an Icarus Verilog 13 executable and adjacent `vvp` are available:
+Full source-level reproduction requires Icarus Verilog and a sibling `vvp`, and writes only to a new dedicated directory:
 
 ```sh
-python rtl/ben-marshall-uart/rebuild.py --iverilog /path/to/iverilog
+python reproduce.py --iverilog /path/to/iverilog --out reproductions/full-run
 ```
 
-Or include source-level regeneration in the complete clean replay:
+The explicitly weaker retained-only mode does not claim RTL recompilation:
 
 ```sh
-python reproduce.py --out results/reproduction --iverilog /path/to/iverilog
+python reproduce.py --retained-only --out reproductions/retained-run
 ```
-
-The default `reproduce.py` does not require or download a simulator. It verifies and reimports the retained raw traces exactly.

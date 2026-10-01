@@ -1108,8 +1108,34 @@
       "mutation": "predecessor deletion upper bound violated",
       "rejected": true,
       "reason": "left-deletion upper bound"
+    },
+    {
+      "mutation": "same-length reordered coverage pairs",
+      "rejected": true,
+      "reason": "coverage pair order or identity"
+    },
+    {
+      "mutation": "same-length duplicate replacement in coverage",
+      "rejected": true,
+      "reason": "coverage pair order or identity"
+    },
+    {
+      "mutation": "same-length reordered full-margin below pairs",
+      "rejected": true,
+      "reason": "coverage pair order or identity"
+    },
+    {
+      "mutation": "same-length duplicate replacement in full-margin below",
+      "rejected": true,
+      "reason": "coverage pair order or identity"
     }
   ],
+  "multi_pair_mutation_baseline": {
+    "pairs": 3,
+    "coverage_records": 3,
+    "full_margin_below_records": 3,
+    "same_length_mutations_rejected": 4
+  },
   "negative_controls": {
     "deletion": {
       "mask": 7,
@@ -1169,8 +1195,8 @@
     }
   ],
   "result": "all assertions passed",
-  "cpu_seconds": 0.13370241799999993,
-  "wall_seconds": 0.13376052900002833,
-  "process_peak_rss_kib": 94252,
+  "cpu_seconds": 0.1290286719999999,
+  "wall_seconds": 0.12903117899986682,
+  "process_peak_rss_kib": 94376,
   "workers": 1
 }

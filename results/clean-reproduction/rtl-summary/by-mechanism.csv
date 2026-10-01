@@ -1,2 +1,0 @@
-mechanism,cases,feasible,infeasible,zero_loss_infeasible,min_cost,max_cost,max_pair_count,max_candidate_checks,max_pair_core,no_loss_false_coverage,marked_false_coverage,marginal_missed_feasible,total_case_cpu_seconds
-uart-loopback-rtl,28,12,16,8,3,5,600,5,1,8,0,0,4.7455235679999985

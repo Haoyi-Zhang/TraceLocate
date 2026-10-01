@@ -113,6 +113,32 @@ def main():
     ps={'h':8,'d':1,'offsets':[0],'contexts':[0]}
     bad,_=synthesize(pm,ps);bad['coverage'][0]['upper'][1][0]=1
     expect_rejected(pm,ps,bad,'predecessor deletion upper bound violated',mut)
+
+    # Order and uniqueness obligations need a legal multi-pair baseline.  These
+    # four mutations preserve list length, so rejection cannot be attributed
+    # merely to a count mismatch.
+    mm=words_model([(0,0),(1,1),(2,2)],[1,1])
+    ms={'h':2,'d':0,'offsets':[0],'contexts':[0]}
+    mc,_=synthesize(mm,ms);validate(mm,ms,mc)
+    assert len(mc['coverage'])==3 and len(mc['full_margin']['below'])==3
+    def corrupt_multi(label,fn):
+        c=copy.deepcopy(mc);fn(c);expect_rejected(mm,ms,c,label,mut)
+    def swap_coverage(c):
+        c['coverage'][0],c['coverage'][1]=c['coverage'][1],c['coverage'][0]
+    def duplicate_replace_coverage(c):
+        c['coverage'][1]=copy.deepcopy(c['coverage'][0])
+    def swap_margin_below(c):
+        c['full_margin']['below'][0],c['full_margin']['below'][1]=(
+            c['full_margin']['below'][1],c['full_margin']['below'][0])
+    def duplicate_replace_margin_below(c):
+        c['full_margin']['below'][1]=copy.deepcopy(c['full_margin']['below'][0])
+    corrupt_multi('same-length reordered coverage pairs',swap_coverage)
+    corrupt_multi('same-length duplicate replacement in coverage',duplicate_replace_coverage)
+    corrupt_multi('same-length reordered full-margin below pairs',swap_margin_below)
+    corrupt_multi('same-length duplicate replacement in full-margin below',duplicate_replace_margin_below)
+    multi_pair_baseline={'pairs':3,'coverage_records':3,'full_margin_below_records':3,
+                         'same_length_mutations_rejected':4}
+
     # All-deleted observations and initially identical classes are true null cases.
     edge=[]
     for words,h,d in [([(0,),(1,)],1,1), ([(1,1),(1,1)],2,0)]:
@@ -134,8 +160,9 @@ def main():
         assert len(p['upper'])*len(p['upper'][0])==4
         fixed.append({'h':h,'records':4,'kernel_taps':3})
     result={'seed':99173,'bitparallel_lcs_grid_checks':lcs_checks,'weighted_oracle_cases':weighted,'permutation_checks':120,
-            'lower_bound_cases':lower,'invalid_mutations':mut,'negative_controls':controls,
-            'null_cases':edge,'horizon_independence_cases':fixed,'result':'all assertions passed',
+            'lower_bound_cases':lower,'invalid_mutations':mut,'multi_pair_mutation_baseline':multi_pair_baseline,
+            'negative_controls':controls,'null_cases':edge,'horizon_independence_cases':fixed,
+            'result':'all assertions passed',
             'cpu_seconds':time.process_time()-t0,'wall_seconds':time.perf_counter()-w0,
             'process_peak_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,'workers':1}
     dest=Path(sys.argv[1]) if len(sys.argv)>1 else Path('results/contract-tests.json')

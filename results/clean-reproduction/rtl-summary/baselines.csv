@@ -1,5 +1,0 @@
-method,declared_feasible,actually_covered,false_coverage,missed_feasible,above_true_minimum,cpu_seconds
-deletion,12,12,0,0,0,0.6043192259999982
-none,20,12,8,0,0,0.19628616700000223
-marked,12,12,0,0,0,0.25789726399999935
-marginal,12,12,0,0,0,2.5355763010000008

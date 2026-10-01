@@ -64,6 +64,25 @@ def mutate_campaign(root: Path) -> None:
     path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
 
 
+
+def mutate_equal_cost_tap_names(root: Path) -> None:
+    """Swap only the equal-cost tx_busy/rxd names; all rows/hashes stay fixed."""
+    path = root / "models/uart-loopback-rtl.json"
+    data = json.loads(path.read_text())
+    data["taps"][1]["name"], data["taps"][7]["name"] = (
+        data["taps"][7]["name"], data["taps"][1]["name"]
+    )
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+
+
+def mutate_derived_fault_cycle(root: Path) -> None:
+    """Move payload-5/tx_data_early 10->11 without touching traces or hashes."""
+    path = root / "rtl/ben-marshall-uart/trace_manifest.json"
+    data = json.loads(path.read_text())
+    data["traces"]["payload-5"]["tx_data_early"]["fault_cycle"] = 11
+    data["resolved_faults"]["payload-5"]["tx_data_early"]["cycle"] = 11
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("out", nargs="?", type=Path, default=ROOT / "results/rtl-bridge-mutations.json")
@@ -72,9 +91,13 @@ def main() -> None:
         ("pinned upstream blob", mutate_source, "upstream integrity"),
         ("declaration-only compatibility copy", mutate_compatibility, "compatibility output"),
         ("retained trace digest", mutate_trace, "trace hash"),
-        ("fault declaration", mutate_fault_metadata, "fault declaration"),
+        ("fault declaration", mutate_fault_metadata, "fixed fault schedule/value"),
         ("trace-to-table cell", mutate_model_cell, "model translation"),
         ("frozen campaign membership", mutate_campaign, "campaign identifiers"),
+        ("equal-cost tx_busy/rxd tap-name swap", mutate_equal_cost_tap_names,
+         "ordered tap name/kind/cost binding"),
+        ("payload-5 tx_data_early cycle 10-to-11", mutate_derived_fault_cycle,
+         "fixed fault schedule/value"),
     ]
     records = []
     with tempfile.TemporaryDirectory(prefix="rtl-bridge-positive-") as td:

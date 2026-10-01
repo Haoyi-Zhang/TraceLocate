@@ -4,14 +4,222 @@
   "captured_rows": 1584,
   "compatibility_copies_verified": 2,
   "contexts": 3,
+  "design_parameter_bit_rate": 1000000,
+  "design_parameter_clk_hz": 4000000,
   "fault_classes": 5,
-  "interpretation": "Exact retained RTL-simulation trace translation check; not synthesis, place-and-route, silicon, or electrical-fault validation.",
-  "model_sha256": "30d7b38c5c1fbeba53fb368c194663504e8ecd7d3c680f1d6b273edef0c59b25",
+  "interpretation": "Exact retained RTL-simulation trace translation check under a cycle-normalized parameter configuration; not synthesis, place-and-route, silicon, line-rate, or electrical-fault validation.",
+  "model_sha256": "58f3c26e5e392ed483864c1a728b4536e2103c85467ec44d67eadb6edbc71c9b",
   "raw_traces": 33,
+  "resolved_fault_records": 30,
   "rows_per_trace": 48,
+  "simulated_clock_hz": 100000000,
   "simulator_log_verified": 1,
   "source_files_verified": 3,
   "status": "passed",
+  "tap_bindings": [
+    {
+      "column": "txd",
+      "cost": 1,
+      "index": 0,
+      "kind": "port",
+      "name": "txd",
+      "signal": "uart_txd"
+    },
+    {
+      "column": "tx_busy",
+      "cost": 1,
+      "index": 1,
+      "kind": "port",
+      "name": "tx_busy",
+      "signal": "uart_tx_busy"
+    },
+    {
+      "column": "tx_fsm0",
+      "cost": 2,
+      "index": 2,
+      "kind": "internal",
+      "name": "tx_fsm[0]",
+      "signal": "tx.fsm_state[0]"
+    },
+    {
+      "column": "tx_fsm1",
+      "cost": 2,
+      "index": 3,
+      "kind": "internal",
+      "name": "tx_fsm[1]",
+      "signal": "tx.fsm_state[1]"
+    },
+    {
+      "column": "tx_bit0",
+      "cost": 2,
+      "index": 4,
+      "kind": "internal",
+      "name": "tx_bit_count[0]",
+      "signal": "tx.bit_counter[0]"
+    },
+    {
+      "column": "tx_bit1",
+      "cost": 2,
+      "index": 5,
+      "kind": "internal",
+      "name": "tx_bit_count[1]",
+      "signal": "tx.bit_counter[1]"
+    },
+    {
+      "column": "tx_data0",
+      "cost": 3,
+      "index": 6,
+      "kind": "internal",
+      "name": "tx_payload_shift[0]",
+      "signal": "tx.data_to_send[0]"
+    },
+    {
+      "column": "rxd",
+      "cost": 1,
+      "index": 7,
+      "kind": "interconnect",
+      "name": "rxd",
+      "signal": "uart_rxd"
+    },
+    {
+      "column": "rx_valid",
+      "cost": 1,
+      "index": 8,
+      "kind": "port",
+      "name": "rx_valid",
+      "signal": "uart_rx_valid"
+    },
+    {
+      "column": "rx_fsm0",
+      "cost": 2,
+      "index": 9,
+      "kind": "internal",
+      "name": "rx_fsm[0]",
+      "signal": "rx.fsm_state[0]"
+    },
+    {
+      "column": "rx_fsm1",
+      "cost": 2,
+      "index": 10,
+      "kind": "internal",
+      "name": "rx_fsm[1]",
+      "signal": "rx.fsm_state[1]"
+    },
+    {
+      "column": "rx_sample",
+      "cost": 2,
+      "index": 11,
+      "kind": "internal",
+      "name": "rx_sample",
+      "signal": "rx.bit_sample"
+    }
+  ],
+  "tap_bindings_verified": 12,
+  "testbench_half_period_ns": 5,
+  "testbench_timebase": {
+    "half_period_ns": 5,
+    "ordered_bindings": [
+      {
+        "column": "txd",
+        "cost": 1,
+        "index": 0,
+        "kind": "port",
+        "name": "txd",
+        "signal": "uart_txd"
+      },
+      {
+        "column": "tx_busy",
+        "cost": 1,
+        "index": 1,
+        "kind": "port",
+        "name": "tx_busy",
+        "signal": "uart_tx_busy"
+      },
+      {
+        "column": "tx_fsm0",
+        "cost": 2,
+        "index": 2,
+        "kind": "internal",
+        "name": "tx_fsm[0]",
+        "signal": "tx.fsm_state[0]"
+      },
+      {
+        "column": "tx_fsm1",
+        "cost": 2,
+        "index": 3,
+        "kind": "internal",
+        "name": "tx_fsm[1]",
+        "signal": "tx.fsm_state[1]"
+      },
+      {
+        "column": "tx_bit0",
+        "cost": 2,
+        "index": 4,
+        "kind": "internal",
+        "name": "tx_bit_count[0]",
+        "signal": "tx.bit_counter[0]"
+      },
+      {
+        "column": "tx_bit1",
+        "cost": 2,
+        "index": 5,
+        "kind": "internal",
+        "name": "tx_bit_count[1]",
+        "signal": "tx.bit_counter[1]"
+      },
+      {
+        "column": "tx_data0",
+        "cost": 3,
+        "index": 6,
+        "kind": "internal",
+        "name": "tx_payload_shift[0]",
+        "signal": "tx.data_to_send[0]"
+      },
+      {
+        "column": "rxd",
+        "cost": 1,
+        "index": 7,
+        "kind": "interconnect",
+        "name": "rxd",
+        "signal": "uart_rxd"
+      },
+      {
+        "column": "rx_valid",
+        "cost": 1,
+        "index": 8,
+        "kind": "port",
+        "name": "rx_valid",
+        "signal": "uart_rx_valid"
+      },
+      {
+        "column": "rx_fsm0",
+        "cost": 2,
+        "index": 9,
+        "kind": "internal",
+        "name": "rx_fsm[0]",
+        "signal": "rx.fsm_state[0]"
+      },
+      {
+        "column": "rx_fsm1",
+        "cost": 2,
+        "index": 10,
+        "kind": "internal",
+        "name": "rx_fsm[1]",
+        "signal": "rx.fsm_state[1]"
+      },
+      {
+        "column": "rx_sample",
+        "cost": 2,
+        "index": 11,
+        "kind": "internal",
+        "name": "rx_sample",
+        "signal": "rx.bit_sample"
+      }
+    ],
+    "simulated_clock_hz": 100000000,
+    "timescale": "1ns/1ps"
+  },
+  "testbench_timescale": "1ns/1ps",
   "translated_table_cells": 1584,
   "variants": 11
 }

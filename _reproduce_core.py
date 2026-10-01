@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Clean, bounded reproduction entry point for the complete artifact.
+"""One-command, fail-closed reproduction for the supported evidence scope.
 
-The wrapper retains the previously validated finite-model/UART pipeline as a
-compatibility stage, then independently rebuilds and compares the two-system
-public-RTL campaign, the second RTL bridge, directed mutations, and a
-standalone exhaustive small-instance oracle.
+Supported scope: 432 finite-model tasks plus the 28-case pinned UART bridge.
+The excluded arbiter and PicoRV32 drafts are not called, counted, or treated as
+scientific evidence.  A full run requires an Icarus Verilog executable; an
+explicit retained-only mode is available for environments without a simulator
+and is labelled accordingly rather than reported as a full replay.
 """
 from __future__ import annotations
 
@@ -12,16 +13,18 @@ import argparse
 import csv
 import hashlib
 import json
-import os
 import shutil
 import subprocess
 import sys
 import tempfile
 import time
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT / "src"))
+from output_safety import create_new_output
+
 DROP_KEY_PARTS = (
     "elapsed", "wall", "runtime", "seconds", "duration", "cpu_time",
     "peak_rss", "rss_kib", "timestamp", "generated_at", "hostname",
@@ -29,17 +32,15 @@ DROP_KEY_PARTS = (
 )
 
 
-def run(command: list[str], *, cwd: Path = ROOT, stdout_path: Path | None = None) -> subprocess.CompletedProcess[str]:
-    proc = subprocess.run(command, cwd=cwd, text=True, capture_output=True, check=False)
-    if stdout_path is not None:
-        stdout_path.parent.mkdir(parents=True, exist_ok=True)
-        stdout_path.write_text(proc.stdout + proc.stderr, encoding="utf-8")
+def run(command: list[str], *, cwd: Path = ROOT, log: Path | None = None) -> str:
+    proc = subprocess.run(command, cwd=cwd, text=True, stdout=subprocess.PIPE,
+                          stderr=subprocess.STDOUT, check=False)
+    if log is not None:
+        log.parent.mkdir(parents=True, exist_ok=True)
+        log.write_text(proc.stdout, encoding="utf-8")
     if proc.returncode:
-        raise RuntimeError(
-            "command failed (exit %d): %s\n%s%s" %
-            (proc.returncode, " ".join(command), proc.stdout, proc.stderr)
-        )
-    return proc
+        raise RuntimeError(f"command failed ({proc.returncode}): {' '.join(command)}\n{proc.stdout}")
+    return proc.stdout
 
 
 def sha256(path: Path) -> str:
@@ -50,233 +51,228 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def normalize(value: Any, roots: Iterable[Path]) -> Any:
-    roots_s = [str(root.resolve()) for root in roots]
+def normalize(value: Any) -> Any:
     if isinstance(value, dict):
-        result = {}
-        for key, item in value.items():
-            lower = str(key).lower()
-            if any(part in lower for part in DROP_KEY_PARTS):
-                continue
-            result[key] = normalize(item, roots)
-        return result
+        return {
+            key: normalize(item)
+            for key, item in value.items()
+            if not any(part in str(key).lower() for part in DROP_KEY_PARTS)
+        }
     if isinstance(value, list):
-        return [normalize(item, roots) for item in value]
+        return [normalize(item) for item in value]
     if isinstance(value, str):
-        text = value
-        for root in roots_s:
-            text = text.replace(root, "<ROOT>")
-        return text
+        return value.replace(str(ROOT), "<ROOT>")
     return value
 
 
-def normalize_csv(path: Path, roots: Iterable[Path]) -> tuple[tuple[str, ...], tuple[tuple[str, ...], ...]]:
-    with path.open(newline="", encoding="utf-8") as fh:
-        reader = csv.DictReader(fh)
-        fields = [f for f in (reader.fieldnames or []) if not any(part in f.lower() for part in DROP_KEY_PARTS)]
-        rows = []
-        for row in reader:
-            cooked = []
-            for field in fields:
-                value: Any = row.get(field, "")
-                for root in roots:
-                    value = str(value).replace(str(root.resolve()), "<ROOT>")
-                cooked.append(str(value))
-            rows.append(tuple(cooked))
-    return tuple(fields), tuple(rows)
+def load_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
-def compare_structured_dirs(retained: Path, regenerated: Path) -> dict[str, int]:
-    retained_files = {p.relative_to(retained) for p in retained.rglob("*") if p.is_file()}
-    regenerated_files = {p.relative_to(regenerated) for p in regenerated.rglob("*") if p.is_file()}
-    # Logs and explicit timing summaries are evidence but not deterministic outputs.
-    def deterministic(paths: set[Path]) -> set[Path]:
-        return {p for p in paths if p.suffix not in {".log"} and "timing" not in p.name.lower()}
-    rset, gset = deterministic(retained_files), deterministic(regenerated_files)
-    if rset != gset:
-        raise AssertionError({"retained_only": sorted(map(str, rset-gset)), "regenerated_only": sorted(map(str, gset-rset))})
-    checked = 0
-    for rel in sorted(rset):
-        left, right = retained / rel, regenerated / rel
-        if rel.suffix == ".json":
-            a = normalize(json.loads(left.read_text(encoding="utf-8")), [retained, regenerated, ROOT])
-            b = normalize(json.loads(right.read_text(encoding="utf-8")), [retained, regenerated, ROOT])
-            if a != b:
-                raise AssertionError(f"normalized JSON mismatch: {rel}")
-        elif rel.suffix == ".csv":
-            if normalize_csv(left, [retained, regenerated, ROOT]) != normalize_csv(right, [retained, regenerated, ROOT]):
-                raise AssertionError(f"normalized CSV mismatch: {rel}")
-        else:
-            if left.read_bytes() != right.read_bytes():
-                raise AssertionError(f"deterministic file mismatch: {rel}")
-        checked += 1
-    return {"files": checked}
+def campaign_ids(instance: Path) -> list[str]:
+    obj = load_json(instance)
+    ids = [case["id"] for case in obj["cases"]]
+    if len(ids) != len(set(ids)):
+        raise AssertionError(f"duplicate case identifiers in {instance}")
+    return ids
 
 
-def compare_certificate_dirs(retained: Path, regenerated: Path, expected: int) -> dict[str, int]:
-    left = {p.name: p for p in retained.glob("*.json")}
-    right = {p.name: p for p in regenerated.glob("*.json")}
-    if len(left) != expected or left.keys() != right.keys():
-        raise AssertionError(f"certificate inventory mismatch: {len(left)} retained, {len(right)} regenerated")
-    for name in sorted(left):
-        if left[name].read_bytes() != right[name].read_bytes():
-            raise AssertionError(f"certificate bytes differ: {name}")
-    return {"certificates": len(left)}
-
-
-def status_from_certificate(obj: Any) -> bool:
-    if not isinstance(obj, dict):
-        raise AssertionError("certificate is not a JSON object")
-    preferred = ["feasible", "covered", "coverage", "success"]
-    for key in preferred:
-        if key in obj and isinstance(obj[key], bool):
-            return obj[key]
-    for key in ("status", "result", "verdict"):
-        if key in obj and isinstance(obj[key], str):
-            value = obj[key].strip().lower().replace("_", "-")
-            if value in {"feasible", "covered", "covering", "passed", "success", "sat", "satisfiable"}:
-                return True
-            if value in {"infeasible", "uncovered", "impossible", "failed", "unsat", "unsatisfiable", "zero-loss-alias"}:
-                return False
-    # Producer certificates use a selected interface for feasible cases and a
-    # complete-interface collision witness for impossible cases.
-    if any(key in obj for key in ("selected_mask", "selected_taps", "interface")):
-        for key in ("collision", "collision_witness", "full_interface_collision"):
-            if obj.get(key):
-                return False
-        return True
-    raise AssertionError(f"cannot infer certificate status from keys: {sorted(obj)}")
-
-
-def count_statuses(directory: Path) -> dict[str, int]:
-    feasible = infeasible = 0
-    for path in sorted(directory.glob("*.json")):
-        if status_from_certificate(json.loads(path.read_text(encoding="utf-8"))):
+def compare_campaign(instance: Path, retained: Path, regenerated: Path) -> dict[str, Any]:
+    ids = campaign_ids(instance)
+    expected = set(ids)
+    report: dict[str, Any] = {"cases": len(ids), "certificates": len(ids)}
+    for leaf in ("cases", "certificates"):
+        rset = {p.stem for p in (retained / leaf).glob("*.json")}
+        gset = {p.stem for p in (regenerated / leaf).glob("*.json")}
+        if rset != expected or gset != expected:
+            raise AssertionError({"leaf": leaf, "retained": sorted(rset ^ expected),
+                                  "regenerated": sorted(gset ^ expected)})
+    feasible = infeasible = zero_loss = 0
+    for ident in ids:
+        rc = retained / "certificates" / f"{ident}.json"
+        gc = regenerated / "certificates" / f"{ident}.json"
+        if rc.read_bytes() != gc.read_bytes():
+            raise AssertionError(f"certificate differs: {ident}")
+        rr = normalize(load_json(retained / "cases" / f"{ident}.json"))
+        gr = normalize(load_json(regenerated / "cases" / f"{ident}.json"))
+        if rr != gr:
+            raise AssertionError(f"deterministic case fields differ: {ident}")
+        if gr["status"] == "feasible":
             feasible += 1
-        else:
+        elif gr["status"] == "infeasible":
             infeasible += 1
-    return {"feasible": feasible, "infeasible": infeasible, "total": feasible + infeasible}
+        else:
+            raise AssertionError(f"unexpected status: {ident}: {gr['status']}")
+        zero_loss += int(gr["full_minimum_loss"] == 0)
+    report.update(feasible=feasible, infeasible=infeasible, zero_loss_infeasible=zero_loss)
+    return report
 
 
-def inventory_digest(root: Path) -> dict[str, Any]:
-    records = []
-    for path in sorted(root.rglob("*")):
-        if not path.is_file():
-            continue
-        rel = path.relative_to(root)
-        if any(part == "__pycache__" for part in rel.parts) or path.suffix == ".pyc":
-            continue
-        records.append({"path": str(rel), "bytes": path.stat().st_size, "sha256": sha256(path)})
-    digest = hashlib.sha256(
-        "".join(f"{r['path']}\0{r['bytes']}\0{r['sha256']}\n" for r in records).encode()
-    ).hexdigest()
-    return {"files": len(records), "sha256": digest}
+def compare_summary(retained: Path, regenerated: Path) -> None:
+    if normalize(load_json(retained)) != normalize(load_json(regenerated)):
+        raise AssertionError(f"scientific summary mismatch: {retained} vs {regenerated}")
+
+
+def compare_uart_rebuild(candidate: Path) -> dict[str, int]:
+    retained_bridge = ROOT / "rtl/ben-marshall-uart"
+    candidate_bridge = candidate / "rtl/ben-marshall-uart"
+    relative_files = [
+        Path("trace_manifest.json"), Path("import_report.json"),
+        Path("generated/manifest.json"), Path("generated/compile.log"),
+        Path("generated/uart_tx.v"), Path("generated/uart_rx.v"),
+    ]
+    relative_files.extend(p.relative_to(retained_bridge)
+                          for p in sorted((retained_bridge / "traces").rglob("*.csv")))
+    checked = 0
+    for rel in relative_files:
+        left, right = retained_bridge / rel, candidate_bridge / rel
+        if left.read_bytes() != right.read_bytes():
+            raise AssertionError(f"UART rebuild differs: {rel}")
+        checked += 1
+    for rel in (Path("models/uart-loopback-rtl.json"), Path("models/rtl-campaign.json")):
+        if (ROOT / rel).read_bytes() != (candidate / rel).read_bytes():
+            raise AssertionError(f"UART imported input differs: {rel}")
+        checked += 1
+    return {"byte_identical_files": checked, "traces": 33}
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--out", type=Path, required=True)
-    parser.add_argument("--iverilog", type=Path)
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out", type=Path, default=Path("reproductions/run"),
+                        help="new path under artifact/reproductions/; existing paths are refused")
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument("--iverilog", type=Path,
+                      help="Icarus Verilog executable for full source-level UART replay")
+    mode.add_argument("--retained-only", action="store_true",
+                      help="validate retained UART traces without recompilation; not a full replay")
     args = parser.parse_args()
-    out = args.out.resolve()
-    if out == ROOT or ROOT in out.parents and out == ROOT.parent:
-        raise SystemExit("refusing unsafe output directory")
-    if out.exists():
-        shutil.rmtree(out)
-    out.mkdir(parents=True)
+
+    out = create_new_output(ROOT, args.out)
+    logs = out / "logs"
     started = time.perf_counter()
 
-    # Stage 1: execute the established 432-case finite campaign and the first
-    # public-RTL bridge in a clean copy configured with its retained 28-case
-    # UART baseline. This preserves the already audited implementation path.
-    with tempfile.TemporaryDirectory(prefix="coverage-certified-legacy-") as td:
-        copy_root = Path(td) / "artifact"
-        shutil.copytree(ROOT, copy_root, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
-        shutil.copy2(copy_root / "models/uart-rtl-campaign.json", copy_root / "models/rtl-campaign.json")
-        shutil.rmtree(copy_root / "results/rtl")
-        shutil.copytree(copy_root / "results/uart-baseline", copy_root / "results/rtl")
-        shutil.rmtree(copy_root / "certificates/rtl")
-        shutil.copytree(copy_root / "certificates/uart-baseline", copy_root / "certificates/rtl")
-        legacy_out = copy_root / "results/wrapper-legacy-reproduction"
-        command = [sys.executable, str(copy_root / "reproduce_legacy.py"), "--out", str(legacy_out)]
-        if args.iverilog:
-            command.extend(["--iverilog", str(args.iverilog.resolve())])
-        run(command, cwd=copy_root, stdout_path=out / "legacy-core.log")
-        shutil.copytree(legacy_out, out / "legacy-core")
+    # Safety is tested only in disposable temporary fixtures.
+    run([sys.executable, str(ROOT / "tests/test_output_safety.py"),
+         "--out", str(out / "output-safety.json")], log=logs / "output-safety.log")
 
-    # Stage 2: independently regenerate the complete 52-case, two-system RTL
-    # campaign and compare all deterministic outputs and certificates.
-    combined = out / "combined-rtl"
-    regenerated_results = combined / "results"
-    regenerated_certs = combined / "certificates"
-    run([
-        sys.executable, str(ROOT / "src/run_campaign.py"),
-        "--campaign", str(ROOT / "models/rtl-campaign.json"),
-        "--out", str(regenerated_results),
-        "--cert-dir", str(regenerated_certs),
-    ], stdout_path=combined / "run.log")
-    result_compare = compare_structured_dirs(ROOT / "results/rtl", regenerated_results)
-    certificate_compare = compare_certificate_dirs(ROOT / "certificates/rtl", regenerated_certs, 52)
+    # Stage 1: regenerate and independently consume all 432 finite-model tasks.
+    finite = out / "finite"
+    run([sys.executable, str(ROOT / "src/run_campaign.py"), "--root", str(ROOT),
+         "--instance", str(ROOT / "models/campaign.json"),
+         "--out", str(finite / "campaign"), "--seconds", "2700"],
+        log=logs / "finite-campaign.log")
+    run([sys.executable, str(ROOT / "src/summarize.py"), "--root", str(ROOT),
+         "--instance", str(ROOT / "models/campaign.json"),
+         "--results", str(finite / "campaign"), "--out", str(finite / "summary")],
+        log=logs / "finite-summary.log")
+    finite_compare = compare_campaign(ROOT / "models/campaign.json",
+                                      ROOT / "results/campaign", finite / "campaign")
+    compare_summary(ROOT / "results/summary/summary.json", finite / "summary/summary.json")
+    if finite_compare != {"cases": 432, "certificates": 432, "feasible": 85,
+                           "infeasible": 347, "zero_loss_infeasible": 327}:
+        raise AssertionError(f"unexpected finite matrix: {finite_compare}")
 
-    # Stage 3: consume the second RTL bridge independently, optionally
-    # re-simulating its 27 traces from the pinned Verilog source.
-    bridge_command = [
-        sys.executable, str(ROOT / "src/check_arbiter_bridge.py"),
-        "--root", str(ROOT), "--json-out", str(out / "arbiter-bridge.json")
-    ]
+    # Stage 2: validate the retained UART source-to-language bridge.  A full
+    # run additionally rebuilds in an isolated temporary copy and requires
+    # byte-identical traces, model and 28-case campaign.
+    uart = out / "uart"
+    run([sys.executable, str(ROOT / "src/check_rtl_bridge.py"), "--root", str(ROOT),
+         "--out", str(uart / "bridge-retained.json")], log=logs / "uart-bridge-retained.log")
+    replay: dict[str, Any] = {"source_level_resimulation": False}
     if args.iverilog:
-        bridge_command.extend(["--iverilog", str(args.iverilog.resolve())])
-    run(bridge_command, stdout_path=out / "arbiter-bridge.log")
-    run([
-        sys.executable, str(ROOT / "tests/test_arbiter_bridge.py"),
-        "--root", str(ROOT), "--out", str(out / "arbiter-mutations.json")
-    ], stdout_path=out / "arbiter-mutations.log")
+        iv = args.iverilog.resolve(strict=True)
+        if not (iv.is_file() and iv.with_name("vvp").is_file()):
+            raise SystemExit("--iverilog must name an executable with a sibling vvp")
+        with tempfile.TemporaryDirectory(prefix="coverage-uart-rebuild-") as td:
+            candidate = Path(td) / "artifact"
+            (candidate / "rtl").mkdir(parents=True)
+            shutil.copytree(ROOT / "rtl/ben-marshall-uart", candidate / "rtl/ben-marshall-uart")
+            (candidate / "models").mkdir()
+            for name in ("uart-loopback-rtl.json", "rtl-campaign.json"):
+                shutil.copy2(ROOT / "models" / name, candidate / "models" / name)
+            run([sys.executable, str(candidate / "rtl/ben-marshall-uart/rebuild.py"),
+                 "--iverilog", str(iv)], cwd=candidate,
+                log=logs / "uart-source-rebuild.log")
+            run([sys.executable, str(ROOT / "src/check_rtl_bridge.py"), "--root", str(candidate),
+                 "--out", str(uart / "bridge-rebuilt.json")],
+                log=logs / "uart-bridge-rebuilt.log")
+            replay = {"source_level_resimulation": True, **compare_uart_rebuild(candidate)}
 
-    # Stage 4: execute the implementation-independent exhaustive oracle.
-    run([
-        sys.executable, str(ROOT / "tests/exhaustive_small.py"),
-        "--out", str(out / "exhaustive-small.json")
-    ], stdout_path=out / "exhaustive-small.log")
+    # Stage 3: regenerate the authoritative 28-case UART campaign.
+    run([sys.executable, str(ROOT / "src/run_campaign.py"), "--root", str(ROOT),
+         "--instance", str(ROOT / "models/rtl-campaign.json"),
+         "--out", str(uart / "campaign"), "--seconds", "2700"],
+        log=logs / "uart-campaign.log")
+    run([sys.executable, str(ROOT / "src/summarize.py"), "--root", str(ROOT),
+         "--instance", str(ROOT / "models/rtl-campaign.json"),
+         "--results", str(uart / "campaign"), "--out", str(uart / "summary")],
+        log=logs / "uart-summary.log")
+    uart_compare = compare_campaign(ROOT / "models/rtl-campaign.json",
+                                    ROOT / "results/rtl-campaign", uart / "campaign")
+    compare_summary(ROOT / "results/rtl-summary/summary.json", uart / "summary/summary.json")
+    if uart_compare != {"cases": 28, "certificates": 28, "feasible": 12,
+                         "infeasible": 16, "zero_loss_infeasible": 8}:
+        raise AssertionError(f"unexpected UART matrix: {uart_compare}")
+    run([sys.executable, str(ROOT / "tests/test_rtl_bridge.py"),
+         str(uart / "bridge-mutations.json")], log=logs / "uart-bridge-mutations.log")
+    run([sys.executable, str(ROOT / "tests/test_uart_regressions.py"),
+         "--out", str(uart / "regressions.json")], log=logs / "uart-regressions.log")
 
-    bridge = json.loads((out / "arbiter-bridge.json").read_text(encoding="utf-8"))
-    mutations = json.loads((out / "arbiter-mutations.json").read_text(encoding="utf-8"))
-    oracle = json.loads((out / "exhaustive-small.json").read_text(encoding="utf-8"))
-    rtl_status = count_statuses(ROOT / "certificates/rtl")
-    # These values are predeclared consequences of the retained matrices; an
-    # unexpected change is a scientific result, not something to hide.
-    if rtl_status != {"feasible": 20, "infeasible": 32, "total": 52}:
-        raise AssertionError(f"unexpected two-system RTL matrix: {rtl_status}")
-    if bridge != {
-        "status": "passed", "pinned_files": 2, "traces": 27,
-        "raw_rows": 1296, "raw_scalar_observations": 15552,
-        "campaign_cases": 24, "combined_cases": 52,
-        "resimulated": bool(args.iverilog),
-    }:
-        raise AssertionError(f"unexpected bridge summary: {bridge}")
-    if mutations.get("rejected") != 6 or oracle.get("status") != "passed":
-        raise AssertionError("mutation or exhaustive-oracle stage failed")
+    # Stage 4: independent finite checks, certificate mutations and timing-only
+    # microbenchmarks.  Pilot scripts run with an output-local working directory.
+    math = out / "math"
+    (math / "results").mkdir(parents=True)
+    run([sys.executable, str(ROOT / "tests/pilot.py")], cwd=math,
+        log=logs / "subsequence-pilot.log")
+    run([sys.executable, str(ROOT / "tests/kernel_pilot.py")], cwd=math,
+        log=logs / "frontier-pilot.log")
+    run([sys.executable, str(ROOT / "tests/test_contract.py"),
+         str(math / "contract-tests.json")], log=logs / "contract-tests.log")
+    run([sys.executable, str(ROOT / "tests/exhaustive_small.py"),
+         "--out", str(math / "exhaustive-small.json")], log=logs / "exhaustive-small.log")
+    run([sys.executable, str(ROOT / "src/independent_math_validation.py"),
+         "--out", str(math / "independent-math-validation.json")],
+        log=logs / "independent-math-validation.log")
+    run([sys.executable, str(ROOT / "src/check_alias.py"),
+         "--model", str(ROOT / "models/lfsr.json"),
+         "--certificate", str(ROOT / "models/alias-witness.json"),
+         "--out", str(math / "alias-check.json")], log=logs / "alias-check.log")
+    run([sys.executable, str(ROOT / "src/microbenchmark.py"),
+         "--out", str(out / "microbenchmark")], log=logs / "microbenchmark.log")
 
+    bridge_mutations = load_json(uart / "bridge-mutations.json")
+    uart_regressions = load_json(uart / "regressions.json")
+    contract = load_json(math / "contract-tests.json")
+    independent = load_json(math / "independent-math-validation.json")
+    exhaustive = load_json(math / "exhaustive-small.json")
+    if bridge_mutations.get("status") != "passed" or bridge_mutations.get("mutations_rejected") != 8:
+        raise AssertionError("UART bridge mutation suite did not reject all eight directed changes")
+    if uart_regressions.get("status") != "passed":
+        raise AssertionError("UART mask/fault regression suite failed")
+    if contract.get("result") != "all assertions passed" or len(contract.get("invalid_mutations", [])) != 24:
+        raise AssertionError("certificate mutation suite did not reject all 24 directed changes")
+    if independent.get("status") != "pass" or exhaustive.get("status") != "passed":
+        raise AssertionError("independent finite oracle failed")
+
+    full = bool(args.iverilog)
     summary = {
-        "schema": "coverage-certified-reproduction-v2",
-        "status": "passed",
-        "bounded_resources": {"worker_processes": 1, "required_cpu_only": True},
-        "retained_matrix": {
-            "finite_cases": 432,
-            "public_rtl_cases": 52,
-            "total_cases": 484,
-            "public_rtl_feasible": rtl_status["feasible"],
-            "public_rtl_infeasible": rtl_status["infeasible"],
-        },
-        "legacy_core": "passed",
-        "combined_rtl_result_comparison": result_compare,
-        "combined_rtl_certificate_comparison": certificate_compare,
-        "arbiter_bridge": bridge,
-        "arbiter_mutations_rejected": mutations["rejected"],
-        "exhaustive_small": oracle,
-        "artifact_inventory": inventory_digest(ROOT),
+        "schema": "coverage-certified-reproduction-v3",
+        "status": "passed" if full else "passed-retained-only",
+        "supported_scope": "432 finite-model tasks plus 28 UART tasks",
+        "unsupported_additions_excluded": ["24-case arbiter draft", "PicoRV32 draft"],
+        "finite": finite_compare,
+        "uart": uart_compare,
+        "uart_bridge": load_json(uart / "bridge-retained.json"),
+        "uart_replay": replay,
+        "uart_bridge_mutations_rejected": bridge_mutations["mutations_rejected"],
+        "certificate_mutations_rejected": len(contract["invalid_mutations"]),
+        "uart_regressions": uart_regressions,
+        "independent_math_validation": independent,
+        "exhaustive_small": exhaustive,
+        "bounded_resources": {"workers": 1, "cpu_only": True},
         "wall_seconds": time.perf_counter() - started,
     }
-    (out / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (out / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
     print(json.dumps(summary, indent=2, sort_keys=True))
 
 

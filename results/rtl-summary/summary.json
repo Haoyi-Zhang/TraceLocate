@@ -8,12 +8,12 @@
   "max_candidates": 5,
   "certificate_min_bytes": 348,
   "certificate_max_bytes": 59483,
-  "campaign_cpu_seconds": 4.738257892999999,
-  "campaign_wall_seconds": 4.741322058000151,
-  "process_peak_rss_kib": 94904,
+  "campaign_cpu_seconds": 4.5180164529999995,
+  "campaign_wall_seconds": 4.519290034999926,
+  "process_peak_rss_kib": 94896,
   "workers": 1,
-  "producer_cpu_seconds": 0.34828185199999984,
-  "checker_cpu_seconds": 0.06652786200000049,
+  "producer_cpu_seconds": 0.3532626089999997,
+  "checker_cpu_seconds": 0.06527427300000022,
   "full_minimum_loss_distribution": {
     "0": 8,
     "1": 20

@@ -3,8 +3,14 @@
     "bit_order": "tap 0 is the least-significant bit of row",
     "clock_edge": "posedge after a one-time-unit nonblocking-assignment settle",
     "deletion_unit": "one complete 12-tap synchronized row",
+    "design_parameter_bit_rate": 1000000,
+    "design_parameter_clk_hz": 4000000,
+    "interpretation": "cycle-normalized parameter configuration; absolute testbench time is not a 4 MHz clock or a 1 MHz physical line-rate measurement",
     "rows": 48,
+    "simulated_clock_hz": 100000000,
     "testbench": "rtl/ben-marshall-uart/trace_tb.sv",
+    "testbench_half_period_ns": 5,
+    "testbench_timescale": "1ns/1ps",
     "timestamps_in_model": false
   },
   "contexts": [

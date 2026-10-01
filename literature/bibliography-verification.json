@@ -1,0 +1,15 @@
+{
+  "citation_keys": 63,
+  "citation_occurrences": 70,
+  "duplicate_dois": 0,
+  "duplicate_titles": 0,
+  "entries": 63,
+  "minimum_required": 55,
+  "pinned_source_entries": 1,
+  "schema": "offline-bibliography-audit-v1",
+  "scholarly_doi_entries": 62,
+  "scope_note": "Identity means a unique stable DOI or an immutable pinned source plus exact ledger and citation closure. The clean run is offline and does not claim to re-resolve registries or to have read every paper in full; reading depth is recorded separately in literature.csv.",
+  "stable_identity_records": 63,
+  "status": "pass",
+  "unresolved": []
+}

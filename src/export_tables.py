@@ -31,7 +31,7 @@ def main():
         lines.append(f"{names[r['mechanism']]} & {n} & {len(model['taps'])} & {len(model['classes'])} & {init} & {r['feasible']} & {r['max_pair_count']} & {cost} \\\\")
     (a.out/'mechanism-rows.tex').write_text('\n'.join(lines)+'\n')
     lines=[]
-    bn={'deletion':'Full-grid oracle','none':'No-loss control','marked':'Marked-erasure control','marginal':'Marginal-tap control'}
+    bn={'deletion':'Exact-LCS oracle','none':'No-loss control','marked':'Marked-erasure control','marginal':'Marginal-tap control'}
     for r in read_csv(Path('results/summary/baselines.csv')):
         lines.append(f"{bn[r['method']]} & {r['declared_feasible']} & {r['actually_covered']} & {r['false_coverage']} & {r['missed_feasible']} \\\\")
     (a.out/'baseline-rows.tex').write_text('\n'.join(lines)+'\n')

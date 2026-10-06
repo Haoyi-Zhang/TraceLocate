@@ -1,0 +1,24 @@
+{
+  "scope": "finite models and passive retained UART data only",
+  "campaigns": {
+    "finite": {
+      "cases": 432,
+      "certificates": 432,
+      "feasible": 85,
+      "infeasible": 347,
+      "zero_loss_infeasible": 327
+    },
+    "uart": {
+      "cases": 28,
+      "certificates": 28,
+      "feasible": 12,
+      "infeasible": 16,
+      "zero_loss_infeasible": 8
+    }
+  },
+  "bridge_mutations_rejected": 10,
+  "certificate_mutations_rejected": 24,
+  "source_resimulation": false,
+  "pdf_build_or_visual_qa": false,
+  "wall_seconds": 76.03664121999998
+}

@@ -1,0 +1,19 @@
+{
+  "collision_and_projection": {
+    "collision_equivalences": 140067,
+    "projected_pairs": 42575,
+    "projection_monotonicity_relations": 101245,
+    "word_pairs": 8871
+  },
+  "exact_selection": {
+    "feasible": 3360,
+    "infeasible": 736,
+    "instances": 4096,
+    "optimum_one_tap": 2496,
+    "optimum_two_taps": 864,
+    "strictly_lower_cost_masks_rejected": 1728
+  },
+  "independence": "No import from src/trace_engine.py or src/check_certificate.py.",
+  "schema": "coverage-certified-exhaustive-small-v1",
+  "status": "passed"
+}

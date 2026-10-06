@@ -1,0 +1,27 @@
+{
+  "cases": 28,
+  "feasible": 12,
+  "infeasible": 16,
+  "zero_loss_infeasible": 8,
+  "certificate_checks": 28,
+  "max_pairs": 600,
+  "max_candidates": 5,
+  "certificate_min_bytes": 348,
+  "certificate_max_bytes": 59483,
+  "campaign_cpu_seconds": 6.9810475389999995,
+  "campaign_wall_seconds": 6.981793067000012,
+  "process_peak_rss_kib": 25280,
+  "workers": 1,
+  "producer_cpu_seconds": 0.5078048370000015,
+  "checker_cpu_seconds": 0.0969936089999971,
+  "full_minimum_loss_distribution": {
+    "0": 8,
+    "1": 20
+  },
+  "selected_tap_count_distribution": {
+    "2": 6,
+    "3": 6
+  },
+  "selected_capture_bits_min": 48,
+  "selected_capture_bits_max": 96
+}

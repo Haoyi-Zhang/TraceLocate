@@ -1,0 +1,50 @@
+{
+  "alias_witness": {
+    "lcs": 24,
+    "pair": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  "authoritative_cost": 3,
+  "authoritative_mask": 2176,
+  "authoritative_taps": [
+    "rxd",
+    "rx_sample"
+  ],
+  "case": "uart-h24-d0-o0-c0",
+  "confusable_cross_class_aliases": 6,
+  "confusable_mask": 2050,
+  "confusable_taps": [
+    "tx_busy",
+    "rx_sample"
+  ],
+  "fixed_faults": {
+    "rx_sample_early": {
+      "column": "rx_sample",
+      "cycle": 12,
+      "value": 0
+    },
+    "rx_sample_late": {
+      "column": "rx_sample",
+      "cycle": 17,
+      "value": 1
+    },
+    "tx_data_early": {
+      "column": "tx_data0",
+      "cycle": 10,
+      "value": 1
+    },
+    "tx_data_late": {
+      "column": "tx_data0",
+      "cycle": 17,
+      "value": 0
+    }
+  },
+  "interpretation": "A bit/name-binding regression for the frozen payload-5, h=24, d=0 task; not evidence for unmeasured UART configurations or physical faults.",
+  "pair_count": 50,
+  "status": "passed"
+}

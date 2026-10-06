@@ -1,0 +1,43 @@
+{
+  "oracle_comparisons": 1592,
+  "correlation_counterexample": {
+    "a": [
+      0,
+      0,
+      0
+    ],
+    "b": [
+      0,
+      1,
+      2
+    ],
+    "joint_lcs": 1,
+    "per_tap_lcs": [
+      2,
+      2
+    ],
+    "h": 3,
+    "d": 1
+  },
+  "timestamp_counterexample": {
+    "a": [
+      0,
+      0,
+      1
+    ],
+    "b": [
+      0,
+      1,
+      0
+    ],
+    "hamming_distance": 2,
+    "joint_lcs": 2,
+    "h": 3,
+    "d": 1
+  },
+  "workers": 1,
+  "wall_seconds": 0.06569559399997615,
+  "cpu_seconds": 0.064992474,
+  "peak_rss_kib": 25280,
+  "scope": "binary words length 1..4; two-tap words length 3; no device observations"
+}

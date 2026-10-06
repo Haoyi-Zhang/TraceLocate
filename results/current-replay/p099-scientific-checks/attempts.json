@@ -1,0 +1,206 @@
+[
+  {
+    "label": "syntax",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/.github/scripts/check_repository.py"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 0.21451111099997888
+  },
+  {
+    "label": "bridge",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/src/check_rtl_bridge.py",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/bridge.json"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 0.26482253499989383
+  },
+  {
+    "label": "bridge-mutations",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/tests/test_rtl_bridge.py",
+      "/home/runner/work/_temp/p099-scientific-checks/bridge-mutations.json",
+      "--fixtures",
+      "/home/runner/work/_temp/p099-scientific-checks/bridge-fixtures"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 2.570111032999989
+  },
+  {
+    "label": "uart-regressions",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/tests/test_uart_regressions.py",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/uart-regressions.json"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 0.2144997489999696
+  },
+  {
+    "label": "finite-campaign",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/src/run_campaign.py",
+      "--root",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code",
+      "--instance",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/models/campaign.json",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/finite/campaign",
+      "--seconds",
+      "900"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 3.673216084000046
+  },
+  {
+    "label": "finite-summary",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/src/summarize.py",
+      "--root",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code",
+      "--instance",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/models/campaign.json",
+      "--results",
+      "/home/runner/work/_temp/p099-scientific-checks/finite/campaign",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/finite/summary"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 0.41513849599994046
+  },
+  {
+    "label": "uart-campaign",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/src/run_campaign.py",
+      "--root",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code",
+      "--instance",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/models/rtl-campaign.json",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/uart/campaign",
+      "--seconds",
+      "900"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 7.1824100299999145
+  },
+  {
+    "label": "uart-summary",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/src/summarize.py",
+      "--root",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code",
+      "--instance",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/models/rtl-campaign.json",
+      "--results",
+      "/home/runner/work/_temp/p099-scientific-checks/uart/campaign",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/uart/summary"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 0.36497882599996956
+  },
+  {
+    "label": "pilot",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/tests/pilot.py"
+    ],
+    "cwd": "/home/runner/work/_temp/p099-scientific-checks/math",
+    "returncode": 0,
+    "wall_seconds": 0.16442251099999794
+  },
+  {
+    "label": "kernel",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/tests/kernel_pilot.py"
+    ],
+    "cwd": "/home/runner/work/_temp/p099-scientific-checks/math",
+    "returncode": 0,
+    "wall_seconds": 2.3702211679999436
+  },
+  {
+    "label": "contract",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/tests/test_contract.py",
+      "/home/runner/work/_temp/p099-scientific-checks/math/contract.json"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 0.4150245590000168
+  },
+  {
+    "label": "exhaustive",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/tests/exhaustive_small.py",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/math/exhaustive.json"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 0.5154528599999821
+  },
+  {
+    "label": "independent",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/src/independent_math_validation.py",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/math/independent.json"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 57.29626323799994
+  },
+  {
+    "label": "alias",
+    "command": [
+      "/opt/hostedtoolcache/Python/3.13.5/x64/bin/python",
+      "-B",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/src/check_alias.py",
+      "--model",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/models/lfsr.json",
+      "--certificate",
+      "/home/runner/work/TraceLocate-code/TraceLocate-code/models/alias-witness.json",
+      "--out",
+      "/home/runner/work/_temp/p099-scientific-checks/math/alias.json"
+    ],
+    "cwd": "/home/runner/work/TraceLocate-code/TraceLocate-code",
+    "returncode": 0,
+    "wall_seconds": 0.16449415800002498
+  }
+]

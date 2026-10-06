@@ -1,0 +1,1 @@
+REJECT: compatibility output uart_rx.v

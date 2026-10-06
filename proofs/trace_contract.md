@@ -4,7 +4,7 @@ These are mathematical proofs written in ordinary notation. Executable tests che
 
 ## 1. Inputs, projection, and universal localization
 
-Let M be a finite set of m coordinates. A row is a tuple in the product of finite coordinate alphabets. All words in this document have the same length h >= 1. Select S subset M; pi_S projects each complete row and does not split its time index. Del_d(x) is the set of all projected words obtained by deleting at most d whole rows from pi_S(x), where 0 <= d <= h. Loss locations are not recorded. For each reliably known context c and class f, L[c,f] is a nonempty finite language of h-row words. The promised contract is
+Let M be a finite set of m coordinates. A row is a tuple in the product of finite coordinate alphabets. All words in this document have the same length h >= 1. Select S subset M; pi_S projects each complete row and does not split its time index. Del_d(x) is the set of all projected words obtained by deleting at most d whole rows from pi_S(x), where 0 <= d <= h. Loss locations are not recorded. A task has at least one context and at least two fault classes, so its cross-class pair set is nonempty. For each reliably known context c and class f, L[c,f] is a nonempty finite language of h-row words. The promised contract is
 
   for every c, every f != g, every x in L[c,f], every y in L[c,g]:
       Del_d(pi_S(x)) intersection Del_d(pi_S(y)) is empty.

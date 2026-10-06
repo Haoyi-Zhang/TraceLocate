@@ -6,7 +6,8 @@ hashing, fault metadata, table translation, and campaign membership rather
 than merely parsing the retained files.
 """
 from __future__ import annotations
-import argparse, json, shutil, subprocess, sys, tempfile
+import argparse, json, os, shutil, subprocess, sys, tempfile
+from contextlib import nullcontext
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,9 +24,9 @@ def copy_fixture(target: Path) -> None:
 
 def invoke(root: Path) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        [sys.executable, str(CHECKER), "--root", str(root), "--out", str(root / "check.json")],
+        [sys.executable, "-B", str(CHECKER), "--root", str(root), "--out", str(root / "check.json")],
         text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=20, check=False,
-        env={"PYTHONDONTWRITEBYTECODE": "1"},
+        env={**os.environ, "PYTHONUTF8": "1", "PYTHONDONTWRITEBYTECODE": "1"},
     )
 
 
@@ -64,6 +65,21 @@ def mutate_campaign(root: Path) -> None:
     path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
 
 
+def mutate_renamed_case(root: Path) -> None:
+    path = root / "models/rtl-campaign.json"
+    data = json.loads(path.read_text())
+    data["cases"][0]["id"] = "renamed-owned-case"
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+
+
+def mutate_exchanged_case_ids(root: Path) -> None:
+    path = root / "models/rtl-campaign.json"
+    data = json.loads(path.read_text())
+    data["cases"][0]["id"], data["cases"][1]["id"] = (
+        data["cases"][1]["id"], data["cases"][0]["id"])
+    path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n")
+
+
 
 def mutate_equal_cost_tap_names(root: Path) -> None:
     """Swap only the equal-cost tx_busy/rxd names; all rows/hashes stay fixed."""
@@ -86,7 +102,20 @@ def mutate_derived_fault_cycle(root: Path) -> None:
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("out", nargs="?", type=Path, default=ROOT / "results/rtl-bridge-mutations.json")
+    p.add_argument("--fixtures", type=Path,
+                   help="new directory in which to retain all passive mutation fixtures and outputs")
     args = p.parse_args()
+    if args.fixtures:
+        args.fixtures.mkdir(parents=True, exist_ok=False)
+    def fixture(label: str):
+        if args.fixtures:
+            path = args.fixtures / label
+            path.mkdir()
+            return nullcontext(path)
+        return tempfile.TemporaryDirectory(prefix="rtl-bridge-" + label + "-")
+    def capture(root: Path, result: subprocess.CompletedProcess[str]) -> None:
+        if args.fixtures:
+            (root / "checker-output.txt").write_text(result.stdout, encoding="utf-8")
     mutations = [
         ("pinned upstream blob", mutate_source, "upstream integrity"),
         ("declaration-only compatibility copy", mutate_compatibility, "compatibility output"),
@@ -94,19 +123,24 @@ def main() -> None:
         ("fault declaration", mutate_fault_metadata, "fixed fault schedule/value"),
         ("trace-to-table cell", mutate_model_cell, "model translation"),
         ("frozen campaign membership", mutate_campaign, "campaign identifiers"),
+        ("renamed campaign case", mutate_renamed_case, "campaign identifier-to-spec binding"),
+        ("exchanged campaign case identifiers", mutate_exchanged_case_ids,
+         "campaign identifier-to-spec binding"),
         ("equal-cost tx_busy/rxd tap-name swap", mutate_equal_cost_tap_names,
          "ordered tap name/kind/cost binding"),
         ("payload-5 tx_data_early cycle 10-to-11", mutate_derived_fault_cycle,
          "fixed fault schedule/value"),
     ]
     records = []
-    with tempfile.TemporaryDirectory(prefix="rtl-bridge-positive-") as td:
+    with fixture("positive") as td:
         root = Path(td); copy_fixture(root); result = invoke(root)
+        capture(root, result)
         if result.returncode != 0:
             raise AssertionError("valid bridge rejected: " + result.stdout)
-    for label, mutation, expected in mutations:
-        with tempfile.TemporaryDirectory(prefix="rtl-bridge-mutation-") as td:
+    for index, (label, mutation, expected) in enumerate(mutations):
+        with fixture(f"mutation-{index}") as td:
             root = Path(td); copy_fixture(root); mutation(root); result = invoke(root)
+            capture(root, result)
             text = result.stdout.strip()
             if result.returncode == 0:
                 raise AssertionError("invalid bridge accepted: " + label)

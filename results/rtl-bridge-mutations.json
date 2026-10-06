@@ -32,6 +32,16 @@
       "rejected": true
     },
     {
+      "mutation": "renamed campaign case",
+      "reason": "REJECT: campaign identifier-to-spec binding",
+      "rejected": true
+    },
+    {
+      "mutation": "exchanged campaign case identifiers",
+      "reason": "REJECT: campaign identifier-to-spec binding",
+      "rejected": true
+    },
+    {
       "mutation": "equal-cost tx_busy/rxd tap-name swap",
       "reason": "REJECT: ordered tap name/kind/cost binding",
       "rejected": true
@@ -42,7 +52,7 @@
       "rejected": true
     }
   ],
-  "mutations_rejected": 8,
+  "mutations_rejected": 10,
   "status": "passed",
   "valid_fixture_accepted": true
 }

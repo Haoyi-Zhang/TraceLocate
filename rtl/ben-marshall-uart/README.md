@@ -48,7 +48,7 @@ The only authoritative campaign is `models/rtl-campaign.json`: 24 core tasks fro
 
 `src/check_rtl_bridge.py` independently checks source identity, compatibility copies, testbench bit/column/signal ordering, tap name/kind/cost ordering, timing declarations, fixed intervention cycles and values, all trace rows and hashes, all imported cells, and the exact campaign Cartesian product.
 
-`tests/test_rtl_bridge.py` rejects eight directed corruptions. Two reviewer-sensitive regressions are: (1) exchanging only the equal-cost `tx_busy` and `rxd` model names is rejected, and (2) changing only `payload-5/tx_data_early` from cycle 10 to 11 while retaining all trace bytes and hashes is rejected. `tests/test_uart_regressions.py` additionally proves for the frozen `payload-5,h=24,d=0` task that mask 2176 selects `{rxd, rx_sample}`, whereas mask 2050 selects `{tx_busy, rx_sample}` and leaves full-length cross-class aliases.
+`tests/test_rtl_bridge.py` rejects ten directed corruptions, including renamed or exchanged campaign identifiers. Two additional regressions are: (1) exchanging only the equal-cost `tx_busy` and `rxd` model names is rejected, and (2) changing only `payload-5/tx_data_early` from cycle 10 to 11 while retaining all trace bytes and hashes is rejected. `tests/test_uart_regressions.py` additionally proves for the frozen `payload-5,h=24,d=0` task that mask 2176 selects `{rxd, rx_sample}`, whereas mask 2050 selects `{tx_busy, rx_sample}` and leaves full-length cross-class aliases.
 
 ## Commands
 

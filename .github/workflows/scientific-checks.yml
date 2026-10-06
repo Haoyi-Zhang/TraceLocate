@@ -1,0 +1,38 @@
+name: Finite scientific checks
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  finite-and-retained-data:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Exact finite campaigns and passive retained-data regressions
+        shell: bash
+        run: |
+          set -euo pipefail
+          ulimit -t 600
+          ulimit -v 2097152
+          timeout --signal=TERM --kill-after=10s 900s python -B src/scientific_checks.py --seconds 850 --out "$RUNNER_TEMP/p099-scientific-checks" 2>&1 | tee "$RUNNER_TEMP/p099-scientific-driver.log"
+      - name: Retain raw attempts on success or failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p099-scientific-output
+          path: |
+            ${{ runner.temp }}/p099-scientific-checks
+            ${{ runner.temp }}/p099-scientific-driver.log
+          if-no-files-found: error
+          retention-days: 14

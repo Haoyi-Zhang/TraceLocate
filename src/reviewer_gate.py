@@ -155,7 +155,7 @@ def main() -> None:
         need(bridge.get("design_parameter_clk_hz") == 4_000_000, "UART CLK_HZ parameter mismatch")
         need(bridge.get("design_parameter_bit_rate") == 1_000_000, "UART BIT_RATE parameter mismatch")
         bridge_mut = load(art / "results/rtl-bridge-mutations.json")
-        need(bridge_mut.get("mutations_rejected") == 8, "bridge mutation count is not 8")
+        need(bridge_mut.get("mutations_rejected") == 10, "bridge mutation count is not 10")
         contract = load(art / "results/contract-tests.json")
         need(contract.get("result") == "all assertions passed", "certificate contract suite failed")
         need(len(contract.get("invalid_mutations", [])) == 24, "certificate mutation count is not 24")
@@ -241,7 +241,7 @@ def main() -> None:
         "status":"pass",
         "scope":{"finite_cases":432,"uart_cases":28,"total_cases":460},
         "certificate_mutations":24,
-        "bridge_mutations":8,
+        "bridge_mutations":10,
         "bibliography_entries":len(bib_keys((paper / "references.bib").read_text(encoding="utf-8"))),
         "note":"Consistency/reproducibility gate only; not peer review or physical validation.",
     }

@@ -7,7 +7,10 @@ from check_certificate import validate
 
 
 def write_json(path:Path,obj):
-    tmp=path.with_suffix(path.suffix+'.tmp');tmp.write_text(json.dumps(obj,separators=(',',':'))+'\n');tmp.replace(path)
+    # Pin the evidence serialization, not the host's default text newline.
+    tmp=path.with_suffix(path.suffix+'.tmp')
+    tmp.write_text(json.dumps(obj,separators=(',',':'))+'\n',encoding='utf-8',newline='\n')
+    tmp.replace(path)
 
 
 def run_one(root:Path,case:dict,out:Path):

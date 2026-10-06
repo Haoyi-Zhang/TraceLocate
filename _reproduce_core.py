@@ -245,8 +245,8 @@ def main() -> None:
     contract = load_json(math / "contract-tests.json")
     independent = load_json(math / "independent-math-validation.json")
     exhaustive = load_json(math / "exhaustive-small.json")
-    if bridge_mutations.get("status") != "passed" or bridge_mutations.get("mutations_rejected") != 8:
-        raise AssertionError("UART bridge mutation suite did not reject all eight directed changes")
+    if bridge_mutations.get("status") != "passed" or bridge_mutations.get("mutations_rejected") != 10:
+        raise AssertionError("UART bridge mutation suite did not reject all ten directed changes")
     if uart_regressions.get("status") != "passed":
         raise AssertionError("UART mask/fault regression suite failed")
     if contract.get("result") != "all assertions passed" or len(contract.get("invalid_mutations", [])) != 24:

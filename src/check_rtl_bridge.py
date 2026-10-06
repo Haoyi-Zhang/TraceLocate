@@ -291,6 +291,14 @@ def main() -> None:
     need(campaign.get("source_manifest") == "rtl/ben-marshall-uart/trace_manifest.json", "campaign source manifest")
     need(len(cases) == len({c["id"] for c in cases}) == 28, "campaign identifiers")
     need(actual_specs == expected_specs, "campaign Cartesian product")
+    # Membership alone does not bind a result-file identifier to its task.
+    # A rename or exchange can preserve the entire Cartesian set of specs.
+    for case in cases:
+        spec = case["spec"]
+        context_label = "all" if len(spec["contexts"]) > 1 else str(spec["contexts"][0])
+        offset_label = "".join(map(str, spec["offsets"]))
+        expected_id = f"uart-h{spec['h']}-d{spec['d']}-o{offset_label}-c{context_label}"
+        need(case["id"] == expected_id, "campaign identifier-to-spec binding")
     need(all(c["model"] == model["name"] and c["spec"]["h"] + max(c["spec"]["offsets"]) <= rows for c in cases), "campaign bounds")
 
     report = {

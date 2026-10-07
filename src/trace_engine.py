@@ -53,6 +53,18 @@ def grid(x: Word, y: Word, mask: int) -> list[list[int]]:
     return g
 
 
+def _lcs_length_rows(x: Word, y: Word, mask: int) -> int:
+    """Same scalar recurrence as grid, retaining only two rows for discovery."""
+    previous = [0] * (len(y) + 1)
+    for u in x:
+        current = [0]
+        for j, v in enumerate(y, 1):
+            current.append(max(previous[j], current[j - 1],
+                               previous[j - 1] + int(((u ^ v) & mask) == 0)))
+        previous = current
+    return previous[-1]
+
+
 
 
 def lcs_length(x: Word, y: Word, mask: int) -> int:
@@ -149,11 +161,13 @@ def minimum_loss(ps: list[Pair],mask:int) -> dict[str,Any]:
     """
     h=len(ps[0][1]);largest=-1;best=None
     for pair in ps:
-        g=grid(pair[1],pair[2],mask)
-        if g[-1][-1]>largest:
-            largest=g[-1][-1];best=(pair,alignment(pair[1],pair[2],mask,g))
+        length=_lcs_length_rows(pair[1],pair[2],mask)
+        if length>largest:
+            largest=length;best=pair
     assert best is not None
-    d=h-largest;pair,a=best
+    d=h-largest;pair=best
+    g=grid(pair[1],pair[2],mask)
+    a=alignment(pair[1],pair[2],mask,g)
     return {'loss':d,'mask':mask,'pair':list(pair[0]),'alignment':a,
             'below':coverage(ps,mask,d-1) if d else []}
 

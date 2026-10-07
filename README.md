@@ -33,6 +33,24 @@ python reproduce.py \
 
 ## Supported evidence
 
+Current minimum-loss preparation discovers pair lengths with two scalar DP rows,
+keeps the original first-maximum tie rule, then builds one unchanged full grid
+for the winning alignment. Below-margin coverage and the independent consumer
+are unchanged. This reduces full-grid construction, not the O(P h²) discovery
+time bound or the O(h²) witness workspace. The bit-parallel exhaustive baseline
+is unchanged. Frozen local-checking/producer measurements remain tied to their
+original sources; no new timing or end-to-end gain is claimed.
+
+Three separate portable owned regressions require only included current sources
+and the standard library, with no simulator or private/before files:
+
+```sh
+python -B -m unittest discover -s tests -p test_minimum_loss_rows.py -v
+```
+
+Scientific CI runs this as a required separate step. It does not replace the
+460-case campaigns, 24 certificate controls, ten bridge controls or RTL replay.
+
 `src/scientific_checks.py --out /absolute/new/output` runs the finite campaigns,
 independent oracles, and passive retained-UART checks without a simulator. Its
 output must be new and outside this artifact directory. The accompanying

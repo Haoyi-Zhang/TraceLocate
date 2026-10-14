@@ -41,11 +41,13 @@ time bound or the O(h²) witness workspace. The bit-parallel exhaustive baseline
 is unchanged. Frozen local-checking/producer measurements remain tied to their
 original sources; no new timing or end-to-end gain is claimed.
 
-Three separate portable owned regressions require only included current sources
-and the standard library, with no simulator or private/before files:
+The portable row, bibliography, and replay-diagnostic regressions require only
+included current sources and the standard library:
 
 ```sh
 python -B -m unittest discover -s tests -p test_minimum_loss_rows.py -v
+python -B -m unittest discover -s tests -p test_bibliography.py -v
+python -B -m unittest discover -s tests -p test_uart_replay_diagnostics.py -v
 ```
 
 Scientific CI runs this as a required separate step. It does not replace the
@@ -54,10 +56,20 @@ Scientific CI runs this as a required separate step. It does not replace the
 `src/scientific_checks.py --out /absolute/new/output` runs the finite campaigns,
 independent oracles, and passive retained-UART checks without a simulator. Its
 output must be new and outside this artifact directory. The accompanying
-`scientific-checks.yml` workflow runs from this flat artifact repository on
-Ubuntu 24.04, bounds the whole run, preserves failure gates, and uploads raw
-attempts even after failure. This is a retained-data check, not an RTL replay,
-paper build, or proof-assistant verification.
+`scientific-checks.yml` workflow retains this finite/retained-data job and adds
+an independent full source-replay job. Both run from this flat artifact repository
+on Ubuntu 24.04 and upload raw attempts after success or failure. The native job
+builds the official Icarus 13.0 release at its fixed source commit, checks that
+tracked tool inputs remain unchanged, and runs the complete reproduction on one
+CPU with bounded time and memory. Exact comparisons include the tool provenance;
+a mismatch retains the rebuilt inputs before failing.
+
+`results/source-replay/` contains the original summary, environment, and execution
+record from the completed native replay. It regenerated 33 UART traces and matched
+41 bridge files and all 460 finite/UART certificates byte for byte. The ten bridge
+mutations and 24 certificate mutations were rejected; the complete workflow took
+79.219 seconds. Its bounded microbenchmark outputs are reproduction data, separate
+from the historical measurements used in the paper's performance plots.
 
 - `models/campaign.json` and six finite models: 432 cases, 85 feasible, 347 infeasible, and 327 zero-loss full-interface aliases.
 - `models/rtl-campaign.json`: exactly 28 UART cases, 12 feasible, 16 infeasible, and 8 zero-loss aliases.

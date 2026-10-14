@@ -1,0 +1,16 @@
+{
+  "workflow_run": "https://github.com/Haoyi-Zhang/TraceLocate-code/actions/runs/38654240226",
+  "source_commit": "5ea862c13cc2f3646c0e4b14516bc34b75b5a228",
+  "tool_repository": "https://github.com/steveicarus/iverilog",
+  "tool_commit": "dfeee909ed9f20b4870dd93423156c0170c0e1ff",
+  "tool_release": "v13_0",
+  "artifact_created_utc": "2026-10-14T23:32:12Z",
+  "archive_digest": "268d8bc93a5920fd8f55e3836959a933139de5e3cd2e1c69adcabb698d829edc",
+  "scope": "Source-level UART re-simulation and the complete declared finite reproduction workflow",
+  "original_performance_measurements_replaced": false,
+  "files": {
+    "summary.json": "a6ddf80b9be66390e5f1994e3543a150bd68f0889541db5a478ee47b3756a269",
+    "environment.log": "39779401a63f96f009f36199984b9690a298afefb9b2aaf6c6f00c46663c9c13"
+  },
+  "summary_is_original_stdout": true
+}

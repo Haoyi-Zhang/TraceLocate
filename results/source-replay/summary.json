@@ -1,0 +1,338 @@
+{
+  "bounded_resources": {
+    "cpu_only": true,
+    "workers": 1
+  },
+  "certificate_mutations_rejected": 24,
+  "exhaustive_small": {
+    "collision_and_projection": {
+      "collision_equivalences": 140067,
+      "projected_pairs": 42575,
+      "projection_monotonicity_relations": 101245,
+      "word_pairs": 8871
+    },
+    "exact_selection": {
+      "feasible": 3360,
+      "infeasible": 736,
+      "instances": 4096,
+      "optimum_one_tap": 2496,
+      "optimum_two_taps": 864,
+      "strictly_lower_cost_masks_rejected": 1728
+    },
+    "independence": "No import from src/trace_engine.py or src/check_certificate.py.",
+    "schema": "coverage-certified-exhaustive-small-v1",
+    "status": "passed"
+  },
+  "finite": {
+    "cases": 432,
+    "certificates": 432,
+    "feasible": 85,
+    "infeasible": 347,
+    "zero_loss_infeasible": 327
+  },
+  "independent_math_validation": {
+    "elapsed_seconds": 57.026734,
+    "lcs_deletion_equivalence_checks": 30948,
+    "max_candidate_observations": 14,
+    "projection_monotonicity_checks": 3651264,
+    "status": "pass",
+    "weighted_optimality_instances": 336,
+    "weighted_unsat_instances": 33
+  },
+  "schema": "coverage-certified-reproduction-v3",
+  "status": "passed",
+  "supported_scope": "432 finite-model tasks plus 28 UART tasks",
+  "uart": {
+    "cases": 28,
+    "certificates": 28,
+    "feasible": 12,
+    "infeasible": 16,
+    "zero_loss_infeasible": 8
+  },
+  "uart_bridge": {
+    "campaign_cases": 28,
+    "campaign_sha256": "299fd14a45a9dd55d65e328427d68a07d924a4afb877b329fe8c5eef5e878092",
+    "captured_rows": 1584,
+    "compatibility_copies_verified": 2,
+    "contexts": 3,
+    "design_parameter_bit_rate": 1000000,
+    "design_parameter_clk_hz": 4000000,
+    "fault_classes": 5,
+    "interpretation": "Exact retained RTL-simulation trace translation check under a cycle-normalized parameter configuration; not synthesis, place-and-route, silicon, line-rate, or electrical-fault validation.",
+    "model_sha256": "58f3c26e5e392ed483864c1a728b4536e2103c85467ec44d67eadb6edbc71c9b",
+    "raw_traces": 33,
+    "resolved_fault_records": 30,
+    "rows_per_trace": 48,
+    "simulated_clock_hz": 100000000,
+    "simulator_log_verified": 1,
+    "source_files_verified": 3,
+    "status": "passed",
+    "tap_bindings": [
+      {
+        "column": "txd",
+        "cost": 1,
+        "index": 0,
+        "kind": "port",
+        "name": "txd",
+        "signal": "uart_txd"
+      },
+      {
+        "column": "tx_busy",
+        "cost": 1,
+        "index": 1,
+        "kind": "port",
+        "name": "tx_busy",
+        "signal": "uart_tx_busy"
+      },
+      {
+        "column": "tx_fsm0",
+        "cost": 2,
+        "index": 2,
+        "kind": "internal",
+        "name": "tx_fsm[0]",
+        "signal": "tx.fsm_state[0]"
+      },
+      {
+        "column": "tx_fsm1",
+        "cost": 2,
+        "index": 3,
+        "kind": "internal",
+        "name": "tx_fsm[1]",
+        "signal": "tx.fsm_state[1]"
+      },
+      {
+        "column": "tx_bit0",
+        "cost": 2,
+        "index": 4,
+        "kind": "internal",
+        "name": "tx_bit_count[0]",
+        "signal": "tx.bit_counter[0]"
+      },
+      {
+        "column": "tx_bit1",
+        "cost": 2,
+        "index": 5,
+        "kind": "internal",
+        "name": "tx_bit_count[1]",
+        "signal": "tx.bit_counter[1]"
+      },
+      {
+        "column": "tx_data0",
+        "cost": 3,
+        "index": 6,
+        "kind": "internal",
+        "name": "tx_payload_shift[0]",
+        "signal": "tx.data_to_send[0]"
+      },
+      {
+        "column": "rxd",
+        "cost": 1,
+        "index": 7,
+        "kind": "interconnect",
+        "name": "rxd",
+        "signal": "uart_rxd"
+      },
+      {
+        "column": "rx_valid",
+        "cost": 1,
+        "index": 8,
+        "kind": "port",
+        "name": "rx_valid",
+        "signal": "uart_rx_valid"
+      },
+      {
+        "column": "rx_fsm0",
+        "cost": 2,
+        "index": 9,
+        "kind": "internal",
+        "name": "rx_fsm[0]",
+        "signal": "rx.fsm_state[0]"
+      },
+      {
+        "column": "rx_fsm1",
+        "cost": 2,
+        "index": 10,
+        "kind": "internal",
+        "name": "rx_fsm[1]",
+        "signal": "rx.fsm_state[1]"
+      },
+      {
+        "column": "rx_sample",
+        "cost": 2,
+        "index": 11,
+        "kind": "internal",
+        "name": "rx_sample",
+        "signal": "rx.bit_sample"
+      }
+    ],
+    "tap_bindings_verified": 12,
+    "testbench_half_period_ns": 5,
+    "testbench_timebase": {
+      "half_period_ns": 5,
+      "ordered_bindings": [
+        {
+          "column": "txd",
+          "cost": 1,
+          "index": 0,
+          "kind": "port",
+          "name": "txd",
+          "signal": "uart_txd"
+        },
+        {
+          "column": "tx_busy",
+          "cost": 1,
+          "index": 1,
+          "kind": "port",
+          "name": "tx_busy",
+          "signal": "uart_tx_busy"
+        },
+        {
+          "column": "tx_fsm0",
+          "cost": 2,
+          "index": 2,
+          "kind": "internal",
+          "name": "tx_fsm[0]",
+          "signal": "tx.fsm_state[0]"
+        },
+        {
+          "column": "tx_fsm1",
+          "cost": 2,
+          "index": 3,
+          "kind": "internal",
+          "name": "tx_fsm[1]",
+          "signal": "tx.fsm_state[1]"
+        },
+        {
+          "column": "tx_bit0",
+          "cost": 2,
+          "index": 4,
+          "kind": "internal",
+          "name": "tx_bit_count[0]",
+          "signal": "tx.bit_counter[0]"
+        },
+        {
+          "column": "tx_bit1",
+          "cost": 2,
+          "index": 5,
+          "kind": "internal",
+          "name": "tx_bit_count[1]",
+          "signal": "tx.bit_counter[1]"
+        },
+        {
+          "column": "tx_data0",
+          "cost": 3,
+          "index": 6,
+          "kind": "internal",
+          "name": "tx_payload_shift[0]",
+          "signal": "tx.data_to_send[0]"
+        },
+        {
+          "column": "rxd",
+          "cost": 1,
+          "index": 7,
+          "kind": "interconnect",
+          "name": "rxd",
+          "signal": "uart_rxd"
+        },
+        {
+          "column": "rx_valid",
+          "cost": 1,
+          "index": 8,
+          "kind": "port",
+          "name": "rx_valid",
+          "signal": "uart_rx_valid"
+        },
+        {
+          "column": "rx_fsm0",
+          "cost": 2,
+          "index": 9,
+          "kind": "internal",
+          "name": "rx_fsm[0]",
+          "signal": "rx.fsm_state[0]"
+        },
+        {
+          "column": "rx_fsm1",
+          "cost": 2,
+          "index": 10,
+          "kind": "internal",
+          "name": "rx_fsm[1]",
+          "signal": "rx.fsm_state[1]"
+        },
+        {
+          "column": "rx_sample",
+          "cost": 2,
+          "index": 11,
+          "kind": "internal",
+          "name": "rx_sample",
+          "signal": "rx.bit_sample"
+        }
+      ],
+      "simulated_clock_hz": 100000000,
+      "timescale": "1ns/1ps"
+    },
+    "testbench_timescale": "1ns/1ps",
+    "translated_table_cells": 1584,
+    "variants": 11
+  },
+  "uart_bridge_mutations_rejected": 10,
+  "uart_regressions": {
+    "alias_witness": {
+      "lcs": 24,
+      "pair": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "authoritative_cost": 3,
+    "authoritative_mask": 2176,
+    "authoritative_taps": [
+      "rxd",
+      "rx_sample"
+    ],
+    "case": "uart-h24-d0-o0-c0",
+    "confusable_cross_class_aliases": 6,
+    "confusable_mask": 2050,
+    "confusable_taps": [
+      "tx_busy",
+      "rx_sample"
+    ],
+    "fixed_faults": {
+      "rx_sample_early": {
+        "column": "rx_sample",
+        "cycle": 12,
+        "value": 0
+      },
+      "rx_sample_late": {
+        "column": "rx_sample",
+        "cycle": 17,
+        "value": 1
+      },
+      "tx_data_early": {
+        "column": "tx_data0",
+        "cycle": 10,
+        "value": 1
+      },
+      "tx_data_late": {
+        "column": "tx_data0",
+        "cycle": 17,
+        "value": 0
+      }
+    },
+    "interpretation": "A bit/name-binding regression for the frozen payload-5, h=24, d=0 task; not evidence for unmeasured UART configurations or physical faults.",
+    "pair_count": 50,
+    "status": "passed"
+  },
+  "uart_replay": {
+    "byte_identical_files": 41,
+    "source_level_resimulation": true,
+    "traces": 33
+  },
+  "unsupported_additions_excluded": [
+    "24-case arbiter draft",
+    "PicoRV32 draft"
+  ],
+  "wall_seconds": 79.21875475600001
+}

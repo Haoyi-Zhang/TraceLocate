@@ -25,6 +25,8 @@ jobs:
           timeout --signal=TERM --kill-after=5s 60s python -B -m unittest discover -s tests -p test_minimum_loss_rows.py -v > "$RUNNER_TEMP/p099-minimum-loss-rows.stdout.log" 2> "$RUNNER_TEMP/p099-minimum-loss-rows.stderr.log"
           timeout --signal=TERM --kill-after=5s 60s python -B -m unittest discover -s tests -p test_bibliography.py -v > "$RUNNER_TEMP/p099-bibliography.stdout.log" 2> "$RUNNER_TEMP/p099-bibliography.stderr.log"
           timeout --signal=TERM --kill-after=5s 60s python -B -O -m unittest discover -s tests -p test_bibliography.py -v > "$RUNNER_TEMP/p099-bibliography-optimized.stdout.log" 2> "$RUNNER_TEMP/p099-bibliography-optimized.stderr.log"
+          timeout --signal=TERM --kill-after=5s 60s python -B -m unittest discover -s tests -p test_uart_replay_diagnostics.py -v > "$RUNNER_TEMP/p099-replay-diagnostics.log" 2>&1
+          timeout --signal=TERM --kill-after=5s 60s python -B -O -m unittest discover -s tests -p test_uart_replay_diagnostics.py -v > "$RUNNER_TEMP/p099-replay-diagnostics-optimized.log" 2>&1
       - name: Exact finite campaigns and passive retained-data regressions
         shell: bash
         run: |
@@ -46,6 +48,8 @@ jobs:
             ${{ runner.temp }}/p099-bibliography.stderr.log
             ${{ runner.temp }}/p099-bibliography-optimized.stdout.log
             ${{ runner.temp }}/p099-bibliography-optimized.stderr.log
+            ${{ runner.temp }}/p099-replay-diagnostics.log
+            ${{ runner.temp }}/p099-replay-diagnostics-optimized.log
           if-no-files-found: error
           retention-days: 14
   native-uart-replay:
@@ -72,8 +76,15 @@ jobs:
             git -C "$RUNNER_TEMP/icarus-source" checkout --detach dfeee909ed9f20b4870dd93423156c0170c0e1ff
             test "$(git -C "$RUNNER_TEMP/icarus-source" rev-parse HEAD)" = dfeee909ed9f20b4870dd93423156c0170c0e1ff
             cd "$RUNNER_TEMP/icarus-source"
+            git update-index --refresh
+            git diff --exit-code
+            git status --short
             sh autoconf.sh
             ./configure --prefix="$RUNNER_TEMP/icarus"
+            git update-index --refresh
+            git diff --exit-code
+            git status --short
+            make version
             make -j2
             make check
             make install

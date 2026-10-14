@@ -113,7 +113,7 @@ def compare_summary(retained: Path, regenerated: Path) -> None:
         raise AssertionError(f"scientific summary mismatch: {retained} vs {regenerated}")
 
 
-def compare_uart_rebuild(candidate: Path) -> dict[str, int]:
+def compare_uart_rebuild(candidate: Path, diagnostics: Path | None = None) -> dict[str, int]:
     retained_bridge = ROOT / "rtl/ben-marshall-uart"
     candidate_bridge = candidate / "rtl/ben-marshall-uart"
     relative_files = [
@@ -123,15 +123,23 @@ def compare_uart_rebuild(candidate: Path) -> dict[str, int]:
     ]
     relative_files.extend(p.relative_to(retained_bridge)
                           for p in sorted((retained_bridge / "traces").rglob("*.csv")))
+
+    def mismatch(message: str) -> None:
+        # Keep the actual rebuilt inputs before the temporary directory closes.
+        # The equality obligation remains byte-for-byte, including provenance.
+        if diagnostics is not None:
+            shutil.copytree(candidate, diagnostics)
+        raise AssertionError(message)
+
     checked = 0
     for rel in relative_files:
         left, right = retained_bridge / rel, candidate_bridge / rel
         if left.read_bytes() != right.read_bytes():
-            raise AssertionError(f"UART rebuild differs: {rel}")
+            mismatch(f"UART rebuild differs: {rel}")
         checked += 1
     for rel in (Path("models/uart-loopback-rtl.json"), Path("models/rtl-campaign.json")):
         if (ROOT / rel).read_bytes() != (candidate / rel).read_bytes():
-            raise AssertionError(f"UART imported input differs: {rel}")
+            mismatch(f"UART imported input differs: {rel}")
         checked += 1
     return {"byte_identical_files": checked, "traces": 33}
 
@@ -196,7 +204,8 @@ def main() -> None:
             run([sys.executable, str(ROOT / "src/check_rtl_bridge.py"), "--root", str(candidate),
                  "--out", str(uart / "bridge-rebuilt.json")],
                 log=logs / "uart-bridge-rebuilt.log")
-            replay = {"source_level_resimulation": True, **compare_uart_rebuild(candidate)}
+            replay = {"source_level_resimulation": True,
+                      **compare_uart_rebuild(candidate, uart / "rebuilt-attempt")}
 
     # Stage 3: regenerate the authoritative 28-case UART campaign.
     run([sys.executable, str(ROOT / "src/run_campaign.py"), "--root", str(ROOT),

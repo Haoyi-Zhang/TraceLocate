@@ -18,6 +18,7 @@ from pathlib import Path
 
 DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$", re.I)
 ENTRY_START = re.compile(r"(?m)^@(\w+)\s*\{\s*([^,]+),")
+NON_REFERENCE_ENTRY_TYPES = frozenset({"comment", "preamble", "string", "ieeetranbstctl"})
 
 
 def normalize(value: str) -> str:
@@ -100,6 +101,8 @@ def parse_fields(body: str) -> dict[str, str]:
 def parse_bib(path: Path) -> list[dict[str, str]]:
     result: list[dict[str, str]] = []
     for entry_type, key, body in split_entries(path.read_text(encoding="utf-8")):
+        if entry_type in NON_REFERENCE_ENTRY_TYPES:
+            continue
         result.append({"type": entry_type, "key": key, **parse_fields(body)})
     return result
 

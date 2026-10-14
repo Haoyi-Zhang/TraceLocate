@@ -79,7 +79,7 @@ jobs:
             git update-index --refresh
             git diff --exit-code
             git status --short
-            sh autoconf.sh
+            if [ ! -f configure ]; then sh autoconf.sh; fi
             ./configure --prefix="$RUNNER_TEMP/icarus"
             git update-index --refresh
             git diff --exit-code

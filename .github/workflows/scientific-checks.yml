@@ -48,3 +48,67 @@ jobs:
             ${{ runner.temp }}/p099-bibliography-optimized.stderr.log
           if-no-files-found: error
           retention-days: 14
+  native-uart-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13.5'
+      - name: Build the pinned stable Icarus source
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            sudo apt-get update
+            sudo apt-get install --no-install-recommends -y autoconf bison flex g++ gperf libbz2-dev libreadline-dev make zlib1g-dev
+            git clone https://github.com/steveicarus/iverilog.git "$RUNNER_TEMP/icarus-source"
+            git -C "$RUNNER_TEMP/icarus-source" checkout --detach dfeee909ed9f20b4870dd93423156c0170c0e1ff
+            test "$(git -C "$RUNNER_TEMP/icarus-source" rev-parse HEAD)" = dfeee909ed9f20b4870dd93423156c0170c0e1ff
+            cd "$RUNNER_TEMP/icarus-source"
+            sh autoconf.sh
+            ./configure --prefix="$RUNNER_TEMP/icarus"
+            make -j2
+            make check
+            make install
+            "$RUNNER_TEMP/icarus/bin/iverilog" -V
+            "$RUNNER_TEMP/icarus/bin/vvp" -V
+          } 2>&1 | tee "$RUNNER_TEMP/p099-icarus-build.log"
+      - name: Record the current execution environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            uname -a
+            cat /etc/os-release
+            lscpu
+            python --version
+            git rev-parse HEAD
+            git -C "$RUNNER_TEMP/icarus-source" rev-parse HEAD
+          } > "$RUNNER_TEMP/p099-native-environment.log"
+      - name: Recompile RTL and reproduce all supported evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          ulimit -t 600
+          ulimit -v 2097152
+          cpu=$(python -c 'import os; print(min(os.sched_getaffinity(0)))')
+          timeout --signal=TERM --kill-after=10s 900s taskset -c "$cpu" python -B reproduce.py --iverilog "$RUNNER_TEMP/icarus/bin/iverilog" --out reproductions/ci-source-run 2>&1 | tee "$RUNNER_TEMP/p099-native-driver.log"
+      - name: Retain native replay attempts on success or failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p099-native-source-output
+          path: |
+            reproductions/ci-source-run
+            ${{ runner.temp }}/p099-icarus-build.log
+            ${{ runner.temp }}/p099-native-environment.log
+            ${{ runner.temp }}/p099-native-driver.log
+          if-no-files-found: error
+          retention-days: 14

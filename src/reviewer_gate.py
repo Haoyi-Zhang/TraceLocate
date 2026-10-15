@@ -17,7 +17,10 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from verify_bibliography import NON_REFERENCE_ENTRY_TYPES
+
 EXPECTED_ROOT = {"README.md", "artifact", "paper"}
+REQUIRED_ROOT = {"artifact", "paper"}
 FORBIDDEN_DIRS = {".pytest_cache", "__pycache__", ".git"}
 FORBIDDEN_SUFFIXES = {".pyc", ".pyo"}
 UNSUPPORTED_PATH_PARTS = {"bmartini-arbiter", "picorv32"}
@@ -28,7 +31,7 @@ def load(path: Path) -> Any:
 
 
 def run(command: list[str], cwd: Path, timeout: int = 180) -> str:
-    p = subprocess.run(command, cwd=cwd, text=True, stdout=subprocess.PIPE,
+    p = subprocess.run(command, cwd=cwd, text=True, encoding="utf-8", stdout=subprocess.PIPE,
                        stderr=subprocess.STDOUT, timeout=timeout, check=False)
     if p.returncode:
         raise AssertionError(f"command failed ({p.returncode}): {' '.join(command)}\n{p.stdout[-6000:]}")
@@ -43,7 +46,13 @@ def citation_keys(tex: str) -> list[str]:
 
 
 def bib_keys(bib: str) -> list[str]:
-    return re.findall(r"(?m)^\s*@\w+\s*\{\s*([^,]+),", bib)
+    return [key.strip() for kind, key in
+            re.findall(r"(?m)^\s*@(\w+)\s*\{\s*([^,]+),", bib)
+            if kind.lower() not in NON_REFERENCE_ENTRY_TYPES]
+
+
+def valid_package_members(names: set[str]) -> bool:
+    return REQUIRED_ROOT <= names <= EXPECTED_ROOT
 
 
 def case_set(path: Path) -> set[str]:
@@ -79,8 +88,8 @@ def main() -> None:
         if not cond:
             errors.append(message)
 
-    need({p.name for p in root.iterdir()} == EXPECTED_ROOT,
-         f"project root must contain exactly {sorted(EXPECTED_ROOT)}")
+    need(valid_package_members({p.name for p in root.iterdir()}),
+         "project root must contain paper/ and artifact/ with an optional README.md")
     need(paper.is_dir() and art.is_dir(), "missing paper/ or artifact/")
 
     # Packaging hygiene and Python syntax.
@@ -213,12 +222,12 @@ def main() -> None:
     need(pdf.exists(), "compiled PDF missing")
     if pdf.exists():
         try:
-            info = run(["pdfinfo", str(pdf)], root, 60)
+            info = run(["pdfinfo", "-isodates", str(pdf)], root, 60)
             match = re.search(r"^Pages:\s+(\d+)", info, re.M)
             need(match is not None, "cannot read PDF page count")
             if match:
                 need(int(match.group(1)) <= 14, "paper exceeds 14 pages")
-            text = run(["pdftotext", str(pdf), "-"], root, 60)
+            text = run(["pdftotext", "-enc", "UTF-8", str(pdf), "-"], root, 60)
             normalized_text = " ".join(text.split())
             need("Coverage Certificates for Post-Silicon Trace Localization under Bounded Row Loss" in normalized_text,
                  "PDF title mismatch")
@@ -226,13 +235,13 @@ def main() -> None:
             need("484 tasks" not in text and "484 cases" not in text, "PDF still contains stale 484 total")
         except Exception as exc:
             errors.append(f"PDF inspection: {exc}")
-    log = paper / "main.log"
+    log = pdf.with_suffix(".log") if args.pdf else paper / "main.log"
     if log.exists():
         log_text = log.read_text(encoding="utf-8", errors="ignore")
         for marker in ("LaTeX Error", "Citation `", "Reference `", "There were undefined references", "Overfull \\hbox", "Overfull \\vbox"):
             need(marker not in log_text, f"LaTeX log contains {marker}")
     else:
-        errors.append("paper/main.log missing")
+        errors.append(f"compiled PDF log missing: {log}")
 
     if errors:
         print(json.dumps({"status":"fail", "errors":errors}, indent=2, sort_keys=True))

@@ -13,6 +13,7 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -34,7 +35,8 @@ DROP_KEY_PARTS = (
 
 def run(command: list[str], *, cwd: Path = ROOT, log: Path | None = None) -> str:
     proc = subprocess.run(command, cwd=cwd, text=True, stdout=subprocess.PIPE,
-                          stderr=subprocess.STDOUT, check=False)
+                          stderr=subprocess.STDOUT, check=False,
+                          env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
     if log is not None:
         log.parent.mkdir(parents=True, exist_ok=True)
         log.write_text(proc.stdout, encoding="utf-8")

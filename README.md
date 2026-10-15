@@ -1,13 +1,18 @@
 # Reproducibility Artifact
 
-This standalone directory contains the computational evidence for the paper's supported scope: 432 finite-model tasks and 28 tasks imported from one pinned public UART simulation bridge. Draft arbiter and PicoRV32 additions are not part of the claimed evidence and are not invoked or counted.
+This standalone directory contains the computational evidence for 432 finite-model tasks and 28 tasks imported from one pinned public UART simulation bridge.
 
 ## Full one-command reproduction
 
-A full replay requires an Icarus Verilog executable with a sibling `vvp`. The output must be a new descendant of this repository root's `reproductions/` directory; existing paths are refused and never deleted.
+A full replay runs on Linux and requires an Icarus Verilog executable with a
+sibling `vvp`. Reference runs use Python 3.13.5; the Python code uses the standard
+library, with no Python package installation. Run the commands from this artifact
+directory. The output must be a new descendant of its `reproductions/` directory;
+existing paths are refused and never deleted. The entry point and its children
+disable bytecode writes so retained source directories stay free of cache files.
 
 ```bash
-python reproduce.py \
+python -B reproduce.py \
   --iverilog /path/to/iverilog \
   --out reproductions/full-run
 ```
@@ -26,7 +31,7 @@ The command, in order:
 For environments without a simulator, an explicitly weaker mode checks the retained UART traces and all downstream evidence but does not claim source-level re-simulation:
 
 ```bash
-python reproduce.py \
+python -B reproduce.py \
   --retained-only \
   --out reproductions/retained-run
 ```
@@ -48,6 +53,7 @@ included current sources and the standard library:
 python -B -m unittest discover -s tests -p test_minimum_loss_rows.py -v
 python -B -m unittest discover -s tests -p test_bibliography.py -v
 python -B -m unittest discover -s tests -p test_uart_replay_diagnostics.py -v
+python -B -m unittest discover -s tests -p test_entrypoints.py -v
 ```
 
 Scientific CI runs this as a required separate step. It does not replace the

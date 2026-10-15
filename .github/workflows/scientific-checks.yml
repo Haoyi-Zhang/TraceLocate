@@ -22,6 +22,7 @@ jobs:
       - name: Portable row and bibliography regressions
         shell: bash
         run: |
+          timeout --signal=TERM --kill-after=5s 60s python -B -m unittest discover -s tests -p test_entrypoints.py -v > "$RUNNER_TEMP/p099-entrypoints.log" 2>&1
           timeout --signal=TERM --kill-after=5s 60s python -B -m unittest discover -s tests -p test_minimum_loss_rows.py -v > "$RUNNER_TEMP/p099-minimum-loss-rows.stdout.log" 2> "$RUNNER_TEMP/p099-minimum-loss-rows.stderr.log"
           timeout --signal=TERM --kill-after=5s 60s python -B -m unittest discover -s tests -p test_bibliography.py -v > "$RUNNER_TEMP/p099-bibliography.stdout.log" 2> "$RUNNER_TEMP/p099-bibliography.stderr.log"
           timeout --signal=TERM --kill-after=5s 60s python -B -O -m unittest discover -s tests -p test_bibliography.py -v > "$RUNNER_TEMP/p099-bibliography-optimized.stdout.log" 2> "$RUNNER_TEMP/p099-bibliography-optimized.stderr.log"
@@ -50,6 +51,7 @@ jobs:
             ${{ runner.temp }}/p099-bibliography-optimized.stderr.log
             ${{ runner.temp }}/p099-replay-diagnostics.log
             ${{ runner.temp }}/p099-replay-diagnostics-optimized.log
+            ${{ runner.temp }}/p099-entrypoints.log
           if-no-files-found: error
           retention-days: 14
   native-uart-replay:

@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import hashlib
 import json
 import os
 import shutil
@@ -43,14 +42,6 @@ def run(command: list[str], *, cwd: Path = ROOT, log: Path | None = None) -> str
     if proc.returncode:
         raise RuntimeError(f"command failed ({proc.returncode}): {' '.join(command)}\n{proc.stdout}")
     return proc.stdout
-
-
-def sha256(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as fh:
-        for block in iter(lambda: fh.read(1 << 20), b""):
-            h.update(block)
-    return h.hexdigest()
 
 
 def normalize(value: Any) -> Any:

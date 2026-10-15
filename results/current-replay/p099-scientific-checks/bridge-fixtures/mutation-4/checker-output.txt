@@ -1,1 +1,0 @@
-REJECT: model translation line_early/7/0

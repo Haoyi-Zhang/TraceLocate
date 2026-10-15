@@ -82,6 +82,9 @@ jobs:
             git diff --exit-code
             git status --short
             if [ ! -f configure ]; then sh autoconf.sh; fi
+            # Git checkout timestamps can otherwise regenerate the tracked
+            # release configure script with the runner's local Autoconf.
+            touch configure
             ./configure --prefix="$RUNNER_TEMP/icarus"
             git update-index --refresh
             git diff --exit-code
@@ -90,6 +93,8 @@ jobs:
             make -j2
             make check
             make install
+            git diff --exit-code
+            test "$(git describe --always --dirty)" = v13_0
             "$RUNNER_TEMP/icarus/bin/iverilog" -V
             "$RUNNER_TEMP/icarus/bin/vvp" -V
           } 2>&1 | tee "$RUNNER_TEMP/p099-icarus-build.log"

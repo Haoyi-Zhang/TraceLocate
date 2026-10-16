@@ -94,3 +94,14 @@ The testbench has ``timescale 1ns/1ps`` and toggles `clk` every 5 ns, so absolut
 ## Boundaries
 
 All guarantees concern finite, equal-length, synchronously sampled row languages with independent deletion of at most the declared number of complete rows. The artifact does not establish synthesis, routed probes, trace-buffer implementation, area, power, timing, FPGA or silicon behavior, electrical faults, or a defect-population distribution.
+
+## Manuscript vector figures
+
+Install `requirements-figures.txt` for optional rendering. Run
+`python -B scripts/plot_figures.py --out figures` for the coverage and
+local-checking plots, and `python -B scripts/draw_schematics.py --out figures`
+for the local blocking certificate. Both are direct Python vector renderers
+with embedded fonts and no TeX backend. The plots read the unchanged retained
+sensitivity and timing CSV files, validate their denominators and family
+identity, and perform no new timing measurements. Use `--out ../paper/figures`
+for the companion paper copies.

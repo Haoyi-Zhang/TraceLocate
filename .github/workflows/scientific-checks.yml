@@ -28,6 +28,7 @@ jobs:
           timeout --signal=TERM --kill-after=5s 60s python -B -O -m unittest discover -s tests -p test_bibliography.py -v > "$RUNNER_TEMP/p099-bibliography-optimized.stdout.log" 2> "$RUNNER_TEMP/p099-bibliography-optimized.stderr.log"
           timeout --signal=TERM --kill-after=5s 60s python -B -m unittest discover -s tests -p test_uart_replay_diagnostics.py -v > "$RUNNER_TEMP/p099-replay-diagnostics.log" 2>&1
           timeout --signal=TERM --kill-after=5s 60s python -B -O -m unittest discover -s tests -p test_uart_replay_diagnostics.py -v > "$RUNNER_TEMP/p099-replay-diagnostics-optimized.log" 2>&1
+          timeout --signal=TERM --kill-after=5s 60s python -B -m unittest discover -s tests -p test_figure_data.py -v
       - name: Exact finite campaigns and passive retained-data regressions
         shell: bash
         run: |
